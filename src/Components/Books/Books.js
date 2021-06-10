@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import { Link } from 'react-router-dom'
+// import {Link} from 'react-router-dom';
 // import {getAllBooks} from '../../utilities/apiCalls';
 import utils from '../../utilities/utils';
 
@@ -19,24 +19,30 @@ const Books = () => {
     fetchBooks()
   }, [])
 
-    const bookCards = books.map((book) =>
-        // const bookImage = `http://covers.openlibrary.org/b/id/${book.title}-L.jpg`
-        // console.log(book.description, book.covers)
+  return (
+      <>
+        <h1>Books</h1>
+        <section className='card-display'>
+          {books.map ((book) => {
+            const {book_title, isbn13 } = book
+            console.log(book_title, isbn13)
+            // const bookImage = `http://covers.openlibrary.org/b/id/${book.title}-L.jpg`
+            // console.log(book.description, book.covers)
 
-        <Books key={book.isbn13} value={book.book_title}/>
-    );
+            return (
+                <div className='book-card' key ={isbn13}>
+                  {/*<img src = {} alt ={book.title}/>*/}
+                  {book_title}
+                </div>
+            )
 
-    return (
-        <>
-          <section className='card-display'>
-            <div className='book-card'>
-              {bookCards}
-            </div>
-          </section>
-        </>
-    );
-  }
+          })}
+        </section>
+
+      </>
+  )
+}
+
+
 
 export default Books;
-
-{/*<img src = {} alt ={book.title}/>*/}
