@@ -1,6 +1,7 @@
-const allWorksURL = 'http://openlibrary.org/authors/OL2162284A/works.json'
+const allWorksURL = "https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=RYjnLebvgEGZoU2o3hlX74KAcas5pRG2" +
 
-export const getBooks = () => {
+
+export const getAllBooks = () => {
   return fetch(allWorksURL)
       .then(response => {
         if (response.ok) {
