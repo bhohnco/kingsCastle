@@ -1,21 +1,20 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-// import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom'
 // import {getAllBooks} from '../../utilities/apiCalls';
 import utils from '../../utilities/utils';
 
 const allWorksURL = 'https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=RYjnLebvgEGZoU2o3hlX74KAcas5pRG2'
 
 const Books = () => {
-  const [books, setBooks] = useState([])
+  const [books, setBooks] = useState([''])
 
     useEffect(() => {
       const fetchBooks = async () => {
         const bookData = await axios.get(allWorksURL)
-        const cleanBooks = (bookData) {
-          return [...new Map(bookData.map(item => [item[key], item])).values()]
-        // setBooks(cleanBooks.data.results)
-        console.log(cleanBooks.data.results)
+        const narrowObject = bookData.data.results
+        // utils.removeDuplicates(narrowObject)
+        setBooks(utils.removeDuplicates(narrowObject))
       }
       fetchBooks()
     }, [])
