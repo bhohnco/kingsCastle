@@ -8,7 +8,9 @@ function App() {
     <div className="App">
       <div className='site-container'>
       <Header/>
+        <div className='card-display'>
         <Books/>
+        </div>
     </div>
       </div>
   );
