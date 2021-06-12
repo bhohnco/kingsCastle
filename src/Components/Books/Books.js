@@ -1,42 +1,61 @@
 import React, {useEffect, useState} from 'react';
-import axios from "axios";
-import { Link } from 'react-router-dom'
-// import {getAllBooks} from '../../utilities/apiCalls';
+// import {Link} from 'react-router-dom';
+import {getBooks} from '../../utilities/ApiCalls';
 import utils from '../../utilities/utils';
-
-const allWorksURL = 'https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=RYjnLebvgEGZoU2o3hlX74KAcas5pRG2'
+import kingCollection from '../../assets/kingCovers/kingcollection.jpeg'
 
 const Books = () => {
-  const [books, setBooks] = useState([''])
+  const [books, setBooks] = useState([])
 
-  useEffect(() => {
-    const fetchBooks = async () => {
-      const bookData = await axios.get(allWorksURL)
-      const narrowObject = bookData.data.results
-      // utils.removeDuplicates(narrowObject)
-      setBooks(utils.removeDuplicates(narrowObject))
-    }
-    fetchBooks()
-  }, [])
+    useEffect(() => {
+      const fetchBooks = async () => {
+        const bookData = await getBooks()
+        const narrowObject = bookData.entries
+        // console.log(narrowObject)
+        utils.removeDuplicates(narrowObject)
+        // console.log(narrowObject)
+        setBooks(narrowObject)
+      }
+      fetchBooks()
+    }, [])
 
-    const bookCards = books.map((book) =>
-        // const bookImage = `http://covers.openlibrary.org/b/id/${book.title}-L.jpg`
-        // console.log(book.description, book.covers)
 
-        <Books key={book.isbn13} value={book.book_title}/>
-    );
 
-    return (
-        <>
-          <section className='card-display'>
-            <div className='book-card'>
-              {bookCards}
-            </div>
-          </section>
-        </>
-    );
-  }
+
+  return books.map (book => {
+    const {title, key, covers} = book
+    const bookImage = `http://covers.openlibrary.org/b/id/${covers}-M.jpg`
+    const fulfilled = true;
+        return <div className="book-link" key={key}>
+          {fulfilled ? (
+          <img className="book-card" style={{
+            backgroundImage: `url(${bookImage})`}}
+               key={key}
+               src={bookImage}
+               alt={title}
+               id={title}
+          /> ) : (
+            <img className="book-card" style={{
+            backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlc9PP7wQNl70osbYG4XhHLgEGnKATtA2tNzaCnoXfRCQ3CMugQsMev9Ar_xHdrCkOL3fz3YiwRw&usqp=CAc)"}}
+                 key={key}
+                 src={bookImage}
+                 alt={title}
+                 id={title}/>
+              )}
+          <h3 className="card-title">{title}</h3>
+        </div>
+  })
+}
+
+
+
+
 
 export default Books;
 
-{/*<img src = {} alt ={book.title}/>*/}
+// const addBookCovers = (covers) =>{
+//   if(covers === ''){
+//     bookImage = {kingCollection}
+//   }else {
+//     bookImage = `http://covers.openlibrary.org/b/id/${covers}-M.jpg`
+//   }

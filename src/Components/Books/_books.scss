@@ -1,0 +1,28 @@
+.card-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 81%
+}
+
+.book-link {
+  width: 19.25%;
+  margin-top: 6px;
+}
+
+.book-card {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 0 0 6px 2px rgb(212, 46, 46);
+}
+
+//img{
+//  width: 50%;
+//  height: 10%;
+//}
