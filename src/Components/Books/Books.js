@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 // import {Link} from 'react-router-dom';
 import {getBooks} from '../../utilities/ApiCalls';
 import utils from '../../utilities/utils';
+import FavButton from "../FavButton/FavButton";
 import kingCollection from '../../assets/kingCovers/kingcollection.jpeg'
 
 const Books = () => {
@@ -18,8 +19,6 @@ const Books = () => {
       }
       fetchBooks()
     }, [])
-
-
 
 
   return books.map (book => {
@@ -43,6 +42,7 @@ const Books = () => {
                  id={title}/>
               )}
           <h3 className="card-title">{title}</h3>
+          <FavButton />
         </div>
   })
 }
