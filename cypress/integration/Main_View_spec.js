@@ -32,7 +32,7 @@ describe('Show main view of kings castle App', () => {
   });
 
   it('Should render search bar from its component', () => {
-    cy.get('.search-bar').should('be.visible')
+    cy.get('.form-control').should('be.visible')
   });
 
   it('Should give the user the chance to click after searching', () => {
@@ -49,5 +49,5 @@ describe('Show main view of kings castle App', () => {
   });
 
   it('Should load books onto the main view of the page on load', () => {
-    cy.get('.book-card').should('have.length', 50)
+    cy.get('.book-card').should('have.length', 100)
   });
