@@ -19,6 +19,7 @@ console.log(favorites)
       <div className='site-container'>
       <Header/>
         <div className='card-display'>
+        <h1 className='container-title'>Books</h1>
         <Books
             favorites ={favorites}
             favoritedBooks ={setFavorites}
