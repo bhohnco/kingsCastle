@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import styled from 'styled-components';
 
 const FavoriteButton = ({book, favoritedBooks, favoriteBooksContainer}) => {
@@ -16,7 +16,7 @@ const FavoriteButton = ({book, favoritedBooks, favoriteBooksContainer}) => {
 
   return (
       <div onClick={()=>addFavoriteBook()}>
-        <span className='mr-2'>Add to Favorites</span>
+        <span className='favorite-button'>Add to Favorites</span>
         <svg
             width='1em'
             height='1em'
