@@ -13,6 +13,7 @@ const Header = ({ handleChange, input, books}) => {
           value= {input}
           onChange={event => handleChange(event)}
       />
+      <button className='search-btn'>Search</button>
     </form>
         <nav className='nav-buttons' >
             <h5 className='home header-button'>Home</h5>
