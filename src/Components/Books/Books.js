@@ -9,15 +9,15 @@ console.log(props)
   const [books, setBooks,] = useState([])
 
   const FavoriteComponent = props.favoriteButtonComponent
-  const CompletedComponent = props.addCompletedBook
+  // const CompletedComponent = props.addCompletedBook
 
 
   useEffect(() => {
     const fetchBooks = async () => {
       const bookData = await getBooks()
       const narrowObject = bookData.entries
-      utils.removeDuplicates(narrowObject)
-      setBooks(narrowObject)
+      const finalData= utils.removeDuplicates(narrowObject)
+      setBooks(finalData)
     }
     fetchBooks()
   }, [])
@@ -27,6 +27,9 @@ console.log(props)
 
   return books.map (book => {
     const {title, key, covers} = book
+    // let first = function(covers) { return !!covers }
+    // let findCoverID = covers.find(first)
+    // console.log(findCoverID)
     const bookImage = `http://covers.openlibrary.org/b/id/${covers}-M.jpg`
         return <div className="book-link" key={key}>
           <img className="book-card" style={{
