@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import styled from 'styled-components';
 
-const FavButton = () => {
+const FavoriteButton = ({book, favoritedBooks, favoriteBooksContainer}) => {
+
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem('app-favorites', JSON.stringify(items));
+  };
+
+  const addFavoriteBook = () => {
+    const newFavoriteList = [book]
+    favoritedBooks(newFavoriteList)
+    saveToLocalStorage(newFavoriteList)
+
+  }
+
   return (
-      <>
-        <span className='mr-2'>Add to Favourites</span>
+      <div onClick={()=>addFavoriteBook()}>
+        <span className='mr-2'>Add to Favorites</span>
         <svg
             width='1em'
             height='1em'
@@ -14,12 +26,12 @@ const FavButton = () => {
             xmlns='http://www.w3.org/2000/svg'
         >
           <path
-              fill-rule='evenodd'
+              fillRule='evenodd'
               d='M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z'
           />
         </svg>
-      </>
+      </div>
   );
 };
 
-export default FavButton;
+export default FavoriteButton;
