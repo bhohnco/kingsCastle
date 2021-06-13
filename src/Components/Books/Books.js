@@ -23,6 +23,8 @@ console.log(props)
   }, [])
 
 
+
+
   return books.map (book => {
     const {title, key, covers} = book
     const bookImage = `http://covers.openlibrary.org/b/id/${covers}-M.jpg`
@@ -38,7 +40,6 @@ console.log(props)
           <FavoriteComponent book={book} favorites={props.favoriteBooksContainer} favoritedBooks={props.favoritedBooks}/>
           <h3 className="card-title">{title}</h3>
           <div>
-          {/*<CompletedComponent book={book} completedBooks={props.completedList} addCompletedBook={props.completedBooks}/>*/}
           </div>
 
         </div>
@@ -47,3 +48,4 @@ console.log(props)
 
 export default Books;
 
+{/*<CompletedComponent book={book} completedBooks={props.completedList} addCompletedBook={props.completedBooks}/>*/}
