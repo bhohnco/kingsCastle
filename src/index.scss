@@ -1,5 +1,6 @@
 @import './Components/App/_app.scss';
-@import './components/HomePage/home_page';
 @import './Components/Header/_header.scss';
 @import './Components/Books/_books.scss';
-@import 'Components/BookInfo/book_info';
+@import './Components/FavoriteButton/_favorite_button.scss';
+@import './Components/BookInfo/book_info.scss';
+@import 'Components/CompletedBookButton/completed_book.scss';
