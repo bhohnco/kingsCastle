@@ -1,22 +1,23 @@
 import React from 'react';
-// import styled from 'styled-components';
 
 const CompletedBookButton = ({book, completedBook, completedList}) => {
 
   const saveToLocalStorage = (items) => {
-    localStorage.setItem('app-favorites', JSON.stringify(items));
+    localStorage.setItem('app-completed', JSON.stringify(items));
   };
 
   const addCompletedBook = () => {
-    const newCompletedList = [...completedList, book]
-    completedBook(newCompletedList)
-    saveToLocalStorage(newCompletedList)
+    // const newCompletedList = [...completedList, book]
+    // completedBook(newCompletedList)
+    // saveToLocalStorage(newCompletedList)
 
   }
 
+
+
   return (
       <div onClick={()=>addCompletedBook()}>
-        <span className='mr-2'>Add to Favorites</span>
+        <span className='completed-button'>Add to Completed</span>
         <svg
             width='1em'
             height='1em'
