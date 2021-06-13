@@ -8,6 +8,7 @@ const utils = {
         // finalOutput.key = toString().split('/')[2];
         return finalOutput.concat([currentObj]).sort()
       }
+      console.log(finalOutput)
       return finalOutput
     }, [])
   },
