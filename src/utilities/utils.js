@@ -2,14 +2,12 @@
 const utils = {
 
   removeDuplicates(objectArray) {
-    console.log(objectArray)
     return objectArray.reduce((finalOutput, currentObj) => {
       const findTitle = finalOutput.find(item => item.title === currentObj.title);
       if (!findTitle) {
         // finalOutput.key = toString().split('/')[2];
         return finalOutput.concat([currentObj]).sort()
       }
-      console.log(finalOutput)
       return finalOutput
     }, [])
   },
