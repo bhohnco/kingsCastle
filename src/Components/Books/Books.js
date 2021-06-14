@@ -1,12 +1,14 @@
-import React, {useEffect, useState} from 'react';
-// import {Link} from 'react-router-dom';
+import React from 'react';
 import PropTypes from "prop-types";
+import '../../assets/kingCovers/kingcollection.jpeg'
 
-
-const Books = ({books, favoriteButtonComponent, favoritesBox, favoritedBooks, searchedBooks }) => {
+const Books = ({books, favoriteButtonComponent, removeFavoriteComponent, favoritesBox, favoritedBooks, searchedBooks }) => {
 
   const FavoriteComponent = favoriteButtonComponent
-  // const CompletedComponent = props.addCompletedBook
+  const RemoveComponent = removeFavoriteComponent
+
+
+
 
   if (searchedBooks.length) {
     const searchBooks = books?.filter(book => {
@@ -29,8 +31,8 @@ const Books = ({books, favoriteButtonComponent, favoritesBox, favoritedBooks, se
              alt={title}
              id={title}
         />
-        <FavoriteComponent book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
-                           className='overlay d-flex align-items-center justify-content-center'/>
+        <FavoriteComponent book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}/>
+        {/*<RemoveComponent book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}/>*/}
         <h3 className="card-title">{title}</h3>
         <div>
         </div>
@@ -43,18 +45,19 @@ const Books = ({books, favoriteButtonComponent, favoritesBox, favoritedBooks, se
   if (books.length) {
     return books.map(book => {
       const {title, key, covers} = book
+
       // let first = function(covers) { return !!covers }
       // console.log(covers)
       // let findCoverID = covers.find(first)
       // console.log(findCoverID)
 
-      const bookImage = `http://covers.openlibrary.org/b/id/${covers}-M.jpg`
+      const bookImageCover = `http://covers.openlibrary.org/b/id/${covers}-M.jpg`
       return <div className="book-link" key={key}>
         <img className="book-card" style={{
-          backgroundImage: `url(${bookImage})`
+          backgroundImage: `url(${bookImageCover})`
         }}
              key={key}
-             src={bookImage}
+             src={bookImageCover}
              alt={title}
              id={title}
         />
