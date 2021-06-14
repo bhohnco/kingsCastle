@@ -7,7 +7,7 @@ import RemoveFavorites from "../RemoveFavorites/RemoveFavorites";
 import './_app.scss';
 import {getBooks} from "../../utilities/ApiCalls";
 import utils from "../../utilities/utils";
-import {Link} from "react-router-dom";
+import {Link, Route, Redirect} from "react-router-dom";
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
       const fetchBooks = async () => {
         const bookData = await getBooks()
         const narrowObject = bookData.entries
-        const finalData= utils.removeDuplicates(narrowObject)
+        const finalData = utils.removeDuplicates(narrowObject)
         setBooks(finalData)
       }
       fetchBooks()
@@ -46,23 +46,31 @@ function App() {
     <div className="App">
       <div className='site-container'>
         <Header/>
-          <SearchBar
-              pushSearchResults={pushSearchResults}
-              searchValue={searchedBooks}
-              setSearchValue={setSearchedBooks}/>
-        <div className='card-display'>
-          <Books
-              books={books}
-              searchedBooks={searchedBooks}
-              bookGroup={setBooks}
-              favoritesBox={favorites}
-              favoritedBooks={setFavorites}
-              favoriteButtonComponent={FavoriteButton}
-              removeFavoriteComponent={RemoveFavorites}/>
-        </div>
-    </div>
+          <Route exact path='/'
+                 render={() => (
+                     !error ?
+                         <>
+                         <SearchBar
+                          pushSearchResults={pushSearchResults}
+                          searchValue={searchedBooks}
+                          setSearchValue={setSearchedBooks}/>
+            <div className='card-display'>
+                <Books
+                  books={books}
+                  searchedBooks={searchedBooks}
+                  bookGroup={setBooks}
+                  favoritesBox={favorites}
+                  favoritedBooks={setFavorites}
+                  favoriteButtonComponent={FavoriteButton}
+                  removeFavoriteComponent={RemoveFavorites}
+                  />
+            </div>
+                         </> : displayErrorMessage()
+                 )} />
+          <Redirect to='/' />
       </div>
+    </div>
   );
-}
+};
 
 export default App;
