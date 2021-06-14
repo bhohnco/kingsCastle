@@ -1,4 +1,5 @@
-const allWorksURL = 'http://openlibrary.org/authors/OL2162284A/works.json?limit=50'
+const allWorksURL = 'http://openlibrary.org/authors/OL2162284A/works.json?limit=107'
+
 
 export const getBooks = () => {
   return fetch(allWorksURL)
@@ -10,3 +11,4 @@ export const getBooks = () => {
         }
       })
 }
+

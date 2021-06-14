@@ -25,15 +25,6 @@
   //transition: transform 0.3s;
 }
 
-.book-card:hover{
-  cursor: pointer;
-  //transform: scale(1.1);
-}
-
-.book-card:hover .overlay {
-  opacity: 1;
-}
-
 .overlay {
   position: absolute;
   background: rgba(217, 207, 207, 0.8);
@@ -44,6 +35,14 @@
   font-size: 18px;
   padding: 20px;
   text-align: center;
+  cursor: pointer;
+}
+
+.favorite-button:hover{
+  cursor: pointer;
+  //transform: scale(1.1);
+}
+.path:hover{
   cursor: pointer;
 }
 //img{

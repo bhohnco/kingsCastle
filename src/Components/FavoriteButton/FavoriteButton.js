@@ -1,37 +1,35 @@
-import React, {useState} from 'react';
+import React from 'react';
+import PropTypes from "prop-types";
+import Toggle from '../Toggle/Toogle'
 // import styled from 'styled-components';
 
-const FavoriteButton = ({book, favoritedBooks, favoriteBooksContainer}) => {
-
+const FavoriteButton = ({book, favoritesBox, favoritedBooks, toggle}) => {
   const saveToLocalStorage = (items) => {
     localStorage.setItem('app-favorites', JSON.stringify(items));
   };
 
   const addFavoriteBook = () => {
-    const newFavoriteList = [book]
+    console.log(book)
+    const newFavoriteList = [{...favoritesBox,book}]
     favoritedBooks(newFavoriteList)
+    console.log(newFavoriteList)
     saveToLocalStorage(newFavoriteList)
-
   }
 
   return (
-      <div onClick={()=>addFavoriteBook()}>
-        <span className='favorite-button'>Add to Favorites</span>
-        <svg
-            width='1em'
-            height='1em'
-            viewBox='0 0 16 16'
-            className='bi bi-heart-fill'
-            fill='red'
-            xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-              fillRule='evenodd'
-              d='M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z'
-          />
-        </svg>
+      <div onClick={()=>addFavoriteBook(book)}>
+        <span className='favorite-button'>Add to Reading List</span>
+        <Toggle/>
       </div>
   );
 };
 
 export default FavoriteButton;
+
+FavoriteButton.propTypes = {
+  addFavoriteBook: PropTypes.func,
+  saveToLocalStorage: PropTypes.string,
+  book:PropTypes.object,
+  favoritesBox: PropTypes.array,
+  // toggle:
+}

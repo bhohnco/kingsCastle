@@ -12,7 +12,7 @@ describe('Show main view of kings castle App', () => {
 
     cy.visit('http://localhost:3000')
   })
-})
+
 
   it('Should be able to visit the main page', () => {
     cy.visit('http://localhost:3000')
@@ -32,22 +32,35 @@ describe('Show main view of kings castle App', () => {
   });
 
   it('Should render search bar from its component', () => {
-    cy.get('.search-bar').should('be.visible')
+    cy.get('.form-control').should('be.visible')
   });
 
-  it('Should give the user the chance to click after searching', () => {
-    cy.get('.search-btn').should('contain', 'Search')
-        .get('.search-btn').click()
-  });
+  it("Should contain a searchBar input", () => {
+  cy.get('.form-control[placeholder="Type to search..."]')
+      .get('.form-control[type="text"]')
+      .get('.form-control[name="input"]')
+})
 
   it('Should have a small book title at the bottom of each card', () => {
     cy.get('.card-title').should('contain', 'Peur bleue')
   });
 
-  it('Should have a subtitle of the top artists listing', () => {
+  it('Should have a subtitle of Books', () => {
     cy.get('.container-title').should('contain', 'Books')
   });
 
   it('Should load books onto the main view of the page on load', () => {
-    cy.get('.book-card').should('have.length', 50)
+    cy.get('.book-card').should('have.length', 100)
   });
+
+it('should be able to type into the search input and see that value in the input', () => {
+  cy.get('.form-control[name="input"]').type('The Dark Half')
+      .should('have.value', 'The Dark Half')
+})
+
+it('should find book by name', () => {
+  cy.get('.form-control[name="input"]').type('The Dark Half')
+      .should('have.value', 'The Dark Half')
+})
+})
+
