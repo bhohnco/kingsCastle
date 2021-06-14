@@ -1,36 +1,25 @@
 import React from 'react';
+import Toggle from '../Toggle/Toogle'
 
-const CompletedBookButton = ({book, completedBook, completedList}) => {
+const CompletedBookButton = ({book, completedBooks, completeGroup, }) => {
 
   const saveToLocalStorage = (items) => {
     localStorage.setItem('app-completed', JSON.stringify(items));
   };
 
-  const addCompletedBook = () => {
-    // const newCompletedList = [...completedList, book]
-    // completedBook(newCompletedList)
-    // saveToLocalStorage(newCompletedList)
-
+  const addCompletedBook = (book) => {
+    const breakDownComplete = {book: book.title}
+    completeGroup((completedBooks) => [
+        ...completedBooks,
+        breakDownComplete,
+    ])
+    saveToLocalStorage(breakDownComplete)
   }
 
-
-
   return (
-      <div onClick={()=>addCompletedBook()}>
+      <div onClick={()=>addCompletedBook(book)}>
         <span className='completed-button'>Add to Completed</span>
-        <svg
-            width='1em'
-            height='1em'
-            viewBox='0 0 16 16'
-            className='bi bi-heart-fill'
-            fill='red'
-            xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-              fillRule='evenodd'
-              d='M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z'
-          />
-        </svg>
+      <Toggle/>
       </div>
   );
 };
