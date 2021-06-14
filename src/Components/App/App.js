@@ -7,14 +7,14 @@ import RemoveFavorites from "../RemoveFavorites/RemoveFavorites";
 import './_app.scss';
 import {getBooks} from "../../utilities/ApiCalls";
 import utils from "../../utilities/utils";
-
-
+import {Link} from "react-router-dom";
 
 function App() {
 
   const [books, setBooks,] = useState([])
   const [searchedBooks, setSearchedBooks] = useState('')
   const [favorites, setFavorites] = useState([])
+  const [error, setError] = useState('')
 
   useEffect(() => {
       const fetchBooks = async () => {
@@ -30,17 +30,27 @@ function App() {
   const pushSearchResults = (search) => {
     setSearchedBooks(search)
   }
-console.log(searchedBooks)
+
+  const displayErrorMessage = () => {
+    <article className="display-error-message">
+      <h1>{error.message}</h1>
+      <Link to='/'>
+        <h4 className="back-to-home" onClick={() => this.setError({error: ''})}>
+          Back to the Castle
+        </h4>
+      </Link>
+    </article>
+  }
 
   return (
     <div className="App">
       <div className='site-container'>
-      <Header/>
-        <>
-        <SearchBar pushSearchResults={pushSearchResults} searchValue={searchedBooks} setSearchValue={setSearchedBooks}/>
-        </>
+        <Header/>
+          <SearchBar
+              pushSearchResults={pushSearchResults}
+              searchValue={searchedBooks}
+              setSearchValue={setSearchedBooks}/>
         <div className='card-display'>
-        <h1 className='container-title'>Books</h1>
           <Books
               books={books}
               searchedBooks={searchedBooks}
