@@ -1,0 +1,45 @@
+.search-bar {
+  height: 20%;
+  width: 40%;
+  padding-right: 19%;
+}
+
+input {
+  height: 175%;
+  width: 192%;
+}
+
+@media screen and (max-width: 1024px) {
+  .search-bar {
+    width: 38%;
+    padding-right: 18%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-bar {
+    width: 58%;
+    padding-right: 34%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  //.search-bar {
+  //  width: 222px;
+  //}
+
+  .search-bar {
+    width: .25em;
+  }
+
+  input {
+    width: 24em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  input {
+    width: 12em;
+  }
+}

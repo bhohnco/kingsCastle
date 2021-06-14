@@ -4,14 +4,14 @@ const SearchBar = ({ pushSearchResults }) => {
   const searchValue = useRef()
 
   return (
-      <div className='col col-sm-4'>
+      <div className='search'>
         <input
-    className='form-control'
+    className='search-bar'
     type="text"
     name="input"
     ref={searchValue}
     onChange={() => pushSearchResults(searchValue.current.value)}
-    placeholder='Type to search...'
+    placeholder='Type to search books...'
         />
       </div>
   );
