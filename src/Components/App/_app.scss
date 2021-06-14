@@ -43,7 +43,7 @@
 
 .overlay {
   position: absolute;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(73, 71, 71, 0.8);
   width: 100%;
   transition: 0.5s ease;
   opacity: 0;
@@ -58,14 +58,33 @@
   text-align: center;
 }
 
-//
-//.error-message {
-//  color: #6FD42E;
-//  font-size: 2em;
-//  text-align: center;
-//}
-//
-//.load-error {
-//  color: #6FD42E;
-//  font-size: 2em;
-//}
+
+.error-message {
+  color: #d42e2e;
+  font-size: 2em;
+  text-align: center;
+}
+
+.load-error {
+  color: #d42e2e;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .site-container {
+    flex-direction: column;
+    overflow-x: scroll;
+    width: 100%;
+    margin:0;
+    padding:0;
+  }
+
+  .book-display {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin:0;
+    padding:0;
+  }
+}
