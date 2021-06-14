@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   flex-shrink: 0;
-  width: 100%;
+  width: 93%;
   height: 70%;
   border-radius: 10px;
   background-size: cover;
@@ -45,7 +45,42 @@
 .path:hover{
   cursor: pointer;
 }
-//img{
-//  width: 50%;
-//  height: 10%;
-//}
+
+
+@media screen and (max-width: 600px) {
+
+  .book-link {
+    flex: 0 0 auto;
+    width: 60%;
+    margin: 7% 0 0 1%
+  }
+
+  .book-card {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 94.25%;
+    flex: 0 0 auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .book-link {
+    width: 69%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .book-link {
+    width: 78%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .book-link {
+    width: 90%;
+  }
+}
