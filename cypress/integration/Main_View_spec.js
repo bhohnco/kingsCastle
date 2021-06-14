@@ -32,13 +32,13 @@ describe('Show main view of kings castle App', () => {
   });
 
   it('Should render search bar from its component', () => {
-    cy.get('.form-control').should('be.visible')
+    cy.get('.search-bar').should('be.visible')
   });
 
   it("Should contain a searchBar input", () => {
-  cy.get('.form-control[placeholder="Type to search..."]')
-      .get('.form-control[type="text"]')
-      .get('.form-control[name="input"]')
+  cy.get('.search-bar[placeholder="Type to search books..."]')
+      .get('.search-bar[type="text"]')
+      .get('.search-bar[name="input"]')
 })
 
   it('Should have a small book title at the bottom of each card', () => {
@@ -46,7 +46,7 @@ describe('Show main view of kings castle App', () => {
   });
 
   it('Should have a subtitle of Books', () => {
-    cy.get('.container-title').should('contain', 'Books')
+    cy.get('.nav-buttons').should('contain', 'The place to find all of Stephen Kings works')
   });
 
   it('Should load books onto the main view of the page on load', () => {
@@ -54,13 +54,31 @@ describe('Show main view of kings castle App', () => {
   });
 
 it('should be able to type into the search input and see that value in the input', () => {
-  cy.get('.form-control[name="input"]').type('The Dark Half')
+  cy.get('.search-bar[name="input"]').type('The Dark Half')
       .should('have.value', 'The Dark Half')
 })
 
 it('should find book by name', () => {
-  cy.get('.form-control[name="input"]').type('The Dark Half')
+  cy.get('.search-bar[name="input"]').type('The Dark Half')
       .should('have.value', 'The Dark Half')
 })
-})
+
+  it('Should display an error message if data is not returned from the API', () => {
+    const errorMessage = 'Uh oh! There was a problem loading the book, please try again!';
+    cy.intercept(
+        {
+          method: 'GET',
+          url: 'http://openlibrary.org/authors/OL2162284A/works.json?limit=107'
+        },{
+          statusCode: 500,
+          message: errorMessage
+        }
+    )
+    cy.visit('http://localhost:3000')
+        .wait(1000)
+        .get('h1').contains(errorMessage)
+  })
+});
+
+
 
