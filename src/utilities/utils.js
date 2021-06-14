@@ -13,13 +13,13 @@ const utils = {
   },
 
   //  filterBookData(bookData) {
-  //   console.log(bookData)
+  //   console.log(bookData.title)
   //    return {
-  //     'title': bookData.entries.title,
-  //     'covers': bookData.entries.covers,
-  //     'description': bookData.entries.description,
-  //     'subjects': bookData.entries.subjects,
-  //     'key': bookData.entries.key,
+  //     'title': bookData.title,
+  //     'covers': bookData.covers,
+  //     'description': bookData.description,
+  //     'subjects': bookData.subjects,
+  //     'key': bookData.key,
   //   };
   // }
 
