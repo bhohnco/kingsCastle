@@ -3,27 +3,28 @@ import Header from '../Header/Header'
 import SearchBar from "../SearchBar /SearchBar";
 import Books from '../Books/Books'
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
-import RemoveFavorites from "../RemoveFavorites/RemoveFavorites";
-import './_app.scss';
+import CompletedBookButton from "../CompletedBookButton/CompletedBookButton";
 import {getBooks} from "../../utilities/ApiCalls";
 import utils from "../../utilities/utils";
 import {Link, Route, Redirect} from "react-router-dom";
+import './_app.scss';
 
 function App() {
 
   const [books, setBooks,] = useState([])
   const [searchedBooks, setSearchedBooks] = useState('')
   const [favorites, setFavorites] = useState([])
+  const [completedBooks, setCompletedBooks] = useState([])
   const [error, setError] = useState('')
 
   useEffect(() => {
-      const fetchBooks = async () => {
-        const bookData = await getBooks()
-        const narrowObject = bookData.entries
-        const finalData = utils.removeDuplicates(narrowObject)
-        setBooks(finalData)
-      }
-      fetchBooks()
+        getBooks()
+            .then(data => {
+              const narrowObject = data.entries
+              const finalData = utils.removeDuplicates(narrowObject)
+              setBooks(finalData)
+      })
+            .catch(error => setError({error}))
     }, [])
 
 
@@ -53,7 +54,8 @@ function App() {
                          <SearchBar
                           pushSearchResults={pushSearchResults}
                           searchValue={searchedBooks}
-                          setSearchValue={setSearchedBooks}/>
+                          setSearchValue={setSearchedBooks}
+                          displayErrorMessage={displayErrorMessage}/>
             <div className='card-display'>
                 <Books
                   books={books}
@@ -62,7 +64,10 @@ function App() {
                   favoritesBox={favorites}
                   favoritedBooks={setFavorites}
                   favoriteButtonComponent={FavoriteButton}
-                  removeFavoriteComponent={RemoveFavorites}
+                  completedBooks={completedBooks}
+                  completeGroup={setCompletedBooks}
+                  addCompletedBookComponent={CompletedBookButton}
+                  displayErrorMessage={displayErrorMessage}/>
                   />
             </div>
                          </> : displayErrorMessage()
@@ -71,6 +76,6 @@ function App() {
       </div>
     </div>
   );
-};
+}
 
 export default App;
