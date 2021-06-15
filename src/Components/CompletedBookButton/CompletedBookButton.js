@@ -1,5 +1,7 @@
 import React from 'react';
 import Toggle from '../Toggle/Toogle'
+import PropTypes from "prop-types";
+
 
 const CompletedBookButton = ({book, completedBooks, completeGroup, }) => {
 
@@ -18,10 +20,19 @@ const CompletedBookButton = ({book, completedBooks, completeGroup, }) => {
 
   return (
       <div onClick={()=>addCompletedBook(book)}>
-        <span className='completed-button'>Add to Completed</span>
-      <Toggle/>
+        <Toggle/>
+        <span className='completed-button'>  Add to Completed Books</span>
       </div>
   );
 };
 
+
 export default CompletedBookButton;
+
+CompletedBookButton.propTypes = {
+  addCompletedBook: PropTypes.func,
+  saveToLocalStorage: PropTypes.string,
+  book:PropTypes.object,
+  completedBooks: PropTypes.array,
+  completeGroup:PropTypes.func,
+}

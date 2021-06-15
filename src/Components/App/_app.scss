@@ -6,19 +6,13 @@
   text-align: center;
 }
 
-  //body {
-  //  background: #821d1d;
-  //  color: #ffffff;
-  //}
-
-
 .site-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
   background: #403737;
-  color: #ffffff;
+  color: #b8abaa;
 }
 
 .card-display {
@@ -34,12 +28,8 @@
 
 .overlay:hover{
   cursor: pointer;
-  //transform: scale(1.1);
 }
 
-//.book-card:hover .overlay {
-//  opacity: 1;
-//}
 
 .overlay {
   position: absolute;
@@ -60,13 +50,13 @@
 
 
 .error-message {
-  color: #d42e2e;
+  color: #D06800FF;
   font-size: 2em;
   text-align: center;
 }
 
 .load-error {
-  color: #d42e2e;
+  color: #D06800FF;
   font-size: 2em;
 }
 

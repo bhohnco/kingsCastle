@@ -20,9 +20,7 @@ const Books = ({books, favoriteButtonComponent, favoritesBox, favoritedBooks, ad
       const bookImage = `http://covers.openlibrary.org/b/id/${coverImage}-M.jpg`
       return <div className="book-link" key={key}>
         <AddBookComponent book={book} completedBooks={completedBooks} completeGroup={completeGroup}/>
-        <img className="book-card" style={{
-          backgroundImage: `url(${bookImage})`
-        }}
+        <img className="book-card"
              key={key}
              src={bookImage}
              alt={title}
@@ -62,14 +60,18 @@ const Books = ({books, favoriteButtonComponent, favoritesBox, favoritedBooks, ad
       </div>
     })
   }
+  else{
+    return null
+  }
 };
 
 Books.propTypes = {
   favoritesBox:PropTypes.array,
   books:PropTypes.array,
-  favoritedBooks:PropTypes.arrayOf(PropTypes.object),
+  favoritedBooks:PropTypes.func,
+  completedBooks:PropTypes.array,
   favoriteButtonComponent:PropTypes.func,
-  removeFavoriteComponent:PropTypes.func,
+  addCompletedBookComponent:PropTypes.func,
   key: PropTypes.string,
   title: PropTypes.string,
   handleClick: PropTypes.string,
