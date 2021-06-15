@@ -3,17 +3,19 @@ import PropTypes from "prop-types";
 import Toggle from '../Toggle/Toogle'
 // import styled from 'styled-components';
 
-const FavoriteButton = ({book, favoritesBox, favoritedBooks, toggle}) => {
+const FavoriteButton = ({book, favoritesBox, favoritedBooks, }) => {
+
   const saveToLocalStorage = (items) => {
     localStorage.setItem('app-favorites', JSON.stringify(items));
   };
 
-  const addFavoriteBook = () => {
-    console.log(book)
-    const newFavoriteList = [{...favoritesBox,book}]
-    favoritedBooks(newFavoriteList)
-    console.log(newFavoriteList)
-    saveToLocalStorage(newFavoriteList)
+  const addFavoriteBook = (book) => {
+    const breakDownBook = {book: book.title}
+    favoritedBooks((favoritesBox) => [
+        ...favoritesBox,
+      breakDownBook,
+    ])
+    saveToLocalStorage(book)
   }
 
   return (

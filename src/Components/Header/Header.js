@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = ({ handleChange, input, books}) => {
+const header = () => {
   return (
       <header className="App-header">
       <h5 className='title'>Kings Castle</h5>
@@ -11,4 +11,4 @@ const Header = ({ handleChange, input, books}) => {
   );
 };
 
-export default Header;
+export default header;
