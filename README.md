@@ -8,17 +8,15 @@
 
 
 ### Description
-#####Niche Audience
-#####Are you a fan of Stephen King but have a hard time keep track of his books? Or you want to find something that is non-horror by him, but don't know where to start? King's Castle holds all of his works, along with cover photos, and soon to be added book descriptions. The user has the ability to add a book to their reading-list or check a book off as completed. They can also search the database for any book title. 
+##### Niche Audience
+##### Are you a fan of Stephen King but have a hard time keep track of his books? Or you want to find something that is non-horror by him, but don't know where to start? King's Castle holds all of his works, along with cover photos, and soon to be added book descriptions. The user has the ability to add a book to their reading-list or check a book off as completed. They can also search the database for any book title. 
 
 
 ### Main Page
-![mainpage1](Screen Shot 2021-06-14 at 7.58.47 PM.png)
+![mainpage](https://user-images.githubusercontent.com/71860165/121983050-e69a9b80-cd4d-11eb-9c71-393f3cba9bf1.png)
 
 ### Mobile / Responsive
-
-
-### Accessibility Audit
+![mobile](https://user-images.githubusercontent.com/71860165/121983525-b0115080-cd4e-11eb-8257-211514825cab.png)
 
 
 ### Setup
@@ -54,8 +52,9 @@
 * Project planning via [GitHub Projects](https://github.com/michannstoner/articulate/projects/1)
 
 ### Reflections
-
-#### Project Evolution
-
+#### Overall this was a challenging project when it comes to dealing with open public APIs. The main issues I ran into were due to data errors, the API crashing or not being available, or the site being overloaded. In the end it all came together, but I'm looking forward to adding additional features like sorting the book by genre or subject, and having a top five book list. I would also like to spend some more time on the design and layout of the app. 
 
 #### Wins 
+* more experience dealing with Data transfering and API calls 
+* Getting to make an app about my favorite author 
+* Using the skills and tools I've learned over the last 6 weeks to build King's Castle. 
