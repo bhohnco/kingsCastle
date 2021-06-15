@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+import PropTypes from 'prop-types'
 
 const SearchBar = ({ pushSearchResults }) => {
   const searchValue = useRef()
@@ -17,4 +18,7 @@ const SearchBar = ({ pushSearchResults }) => {
   );
 }
 
+SearchBar.prototype = {
+  pushSearchResults: PropTypes.func
+}
 export default SearchBar;

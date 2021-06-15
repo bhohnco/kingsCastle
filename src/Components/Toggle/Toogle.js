@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
  function Toggle(props) {
   const toggle = useRef()
   const checkbox = useRef()
-  function handleToggle() {
+
+   function handleToggle() {
     if (props.onChange) props.onChange()
     toggle.current.classList.toggle('toggled')
     checkbox.current.checked = !checkbox.current.checked
@@ -19,6 +20,7 @@ import PropTypes from 'prop-types'
             type='checkbox'
             defaultChecked={props.value}
             value={props.value || false}
+            aria-label="Toggle Button Check Box"
         />
         <span
             ref={toggle}
@@ -29,7 +31,7 @@ import PropTypes from 'prop-types'
       </span>
       </>
   )
-}
+};
 
 export default Toggle;
 

@@ -24,9 +24,10 @@ function App() {
               const finalData = utils.removeDuplicates(narrowObject)
               setBooks(finalData)
       })
-            .catch(error => setError({error}))
+            .catch(error => {
+              setError(error)
+            })
     }, [])
-
 
   const pushSearchResults = (search) => {
     setSearchedBooks(search)
@@ -34,7 +35,7 @@ function App() {
 
   const displayErrorMessage = () => {
     <article className="display-error-message">
-      <h1>{error.message}</h1>
+      <h3 className="error-message">Whoops! Looks like you're in the wrong spot</h3>
       <Link to='/'>
         <h4 className="back-to-home" onClick={() => this.setError({error: ''})}>
           Back to the Castle
@@ -68,7 +69,6 @@ function App() {
                   completeGroup={setCompletedBooks}
                   addCompletedBookComponent={CompletedBookButton}
                   displayErrorMessage={displayErrorMessage}/>
-                  />
             </div>
                          </> : displayErrorMessage()
                  )} />
