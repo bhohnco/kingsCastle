@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import PropTypes from 'prop-types'
 
  function Toggle(props) {
   const toggle = useRef()
@@ -27,17 +26,11 @@ import PropTypes from 'prop-types'
             onClick={handleToggle}
             className={props.checked ? 'toggled toggle-switch' : 'toggle-switch'}
         >
-        <span className='toggle'></span>
+        <span className='toggle'/>
       </span>
       </>
   )
-};
+}
 
 export default Toggle;
 
-Toggle.propTypes = {
-  onChange: PropTypes.func,
-  value: PropTypes.string,
-  name: PropTypes.string,
-  checked: PropTypes.bool
-}
