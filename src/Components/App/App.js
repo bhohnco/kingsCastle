@@ -2,8 +2,7 @@ import React, { useState, useEffect} from "react";
 import Header from '../Header/Header'
 import SearchBar from "../SearchBar /SearchBar";
 import Books from '../Books/Books'
-// import {getBooks} from "../../utilities/ApiCalls";
-import testData from "../../assets/testData";
+import {getBooks} from "../../utilities/ApiCalls";
 import utils from "../../utilities/utils";
 import {Link, Route, Switch} from "react-router-dom";
 import './_app.scss';
@@ -14,26 +13,20 @@ function App() {
   const [searchedBooks, setSearchedBooks] = useState('')
   const [favorites, setFavorites] = useState([])
   const [completedBooks, setCompletedBooks] = useState([])
-  const [error] = useState('')
+  const [error, setError] = useState('')
 
 
   useEffect(() => {
-    const narrowObject = testData.entries
-    utils.removeDuplicates(narrowObject)
-    setBooks(narrowObject)
-  }, [])
-
-  // useEffect(() => {
-  //       getBooks()
-  //           .then(data => {
-  //             const narrowObject = data.entries
-  //             const finalData = utils.removeDuplicates(narrowObject)
-  //             setBooks(finalData)
-  //     })
-  //           .catch(error => {
-  //             setError(error)
-  //           })
-  //   }, [])
+        getBooks()
+            .then(data => {
+              const narrowObject = data.entries
+              const finalData = utils.removeDuplicates(narrowObject)
+              setBooks(finalData)
+      })
+            .catch(error => {
+              setError(error)
+            })
+    }, [])
 
   const pushSearchResults = (search) => {
     setSearchedBooks(search)
@@ -57,7 +50,8 @@ function App() {
         <Switch>
           <Route exact path='/'
                  render={() => (
-                     !error ?
+                     !error && !books.length?
+                   <p>There was a problem grabbing the books, please try again later!</p> :
                          <>
                          <SearchBar
                           pushSearchResults={pushSearchResults}
@@ -75,11 +69,12 @@ function App() {
                   completeGroup={setCompletedBooks}
                   displayErrorMessage={displayErrorMessage}/>
             </div>
-                         </> : displayErrorMessage()
+                         </>
                  )} />
             <Route exact path='/readinglist'
                    render={() => (
-                       !error ?
+                       !error && !favorites.length?
+                           <p>You don't have any favorites yet, return home to add some!</p> :
                            <>
                              <SearchBar
                                  pushSearchResults={pushSearchResults}
@@ -97,7 +92,7 @@ function App() {
                    completeGroup={setCompletedBooks}
                    displayErrorMessage={displayErrorMessage}/>
                              </div>
-                           </> : displayErrorMessage()
+                           </>
               )} />
         </Switch>
       </div>
