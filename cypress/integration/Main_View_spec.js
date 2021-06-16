@@ -25,10 +25,10 @@ describe('Show main view of kings castle App', () => {
   it("The header information should render on load", () => {
     cy.get('.App-header').should('be.visible')
     cy.contains('.title', "Kings Castle")
-    cy.contains('.nav-buttons', "The place to find all of Stephen Kings works")
+    cy.contains('.page-quote', "The place to find all of Stephen Kings works")
   })
 
-  it('Should have red on our page title', () => {
+  it('Should have color on our page title', () => {
     cy.get('.App-header').should('have.css', 'background-color')
   });
 
@@ -64,10 +64,6 @@ describe('Show main view of kings castle App', () => {
 
   it('Should have a small book title at the bottom of each card', () => {
     cy.get('.card-title').should('contain', 'Peur bleue')
-  });
-
-  it('Should have a subtitle of Books', () => {
-    cy.get('.nav-buttons').should('contain', 'The place to find all of Stephen Kings works')
   });
 
   it('Should load books onto the main view of the page on load', () => {
@@ -107,8 +103,7 @@ describe('Show main view of kings castle App', () => {
     })
 
     it('User should be able to add books to read-list', () => {
-      cy.visit('http://localhost:3000/')
-      cy.get('.toggle').click({ multiple: true })
+      cy.get('.favorite-button').eq(1).click()
     })
 
     it('Should show error if books cannot be fetched', () => {
@@ -119,7 +114,6 @@ describe('Show main view of kings castle App', () => {
           },
           {statusCode: 404, body: ''}
       )
-      cy.visit('http://localhost:3000')
           .get('.display-error-message, [class="error-message"]')
     })
   })

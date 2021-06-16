@@ -3,20 +3,18 @@ describe('ReadingList', () => {
     cy.visit('http://localhost:3000')
   })
 
-  it('User should be able to add books to read-list or completed books', () => {
-    cy.get('.favorite-button')
+  it('User should be able to add books to read-list', () => {
+    cy.contains('Add to')
         .each(($el, $index) => {
-          if($index === 4){
+          if($index === 6){
             return false
           }
           cy.wrap($el).click()
         })
-  })
-
-  it ("The user should be able to see their add favorite books", () => {
+    cy.wait(2500)
     cy.get('.reading-list-button').click()
-
-
+    cy.get('.card-display').should('have.length', 1)
+    cy.get('.card-title').should('have.text', "Peur bleue")
+    })
   })
 
-})
