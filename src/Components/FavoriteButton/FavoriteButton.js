@@ -10,17 +10,17 @@ const FavoriteButton = ({book, favoritesBox, favoritedBooks, }) => {
   };
 
   const addFavoriteBook = (book) => {
-    const breakDownBook = {book: book.title}
+    // const breakDownBook = {book}
     favoritedBooks((favoritesBox) => [
         ...favoritesBox,
-      breakDownBook,
+      book,
     ])
     saveToLocalStorage(book)
   }
 
   return (
-      <div onClick={()=>addFavoriteBook(book)}>
-        <span className='favorite-button'>Add to Reading List  </span>
+      <div onClick={()=>addFavoriteBook(book)} className="favorite-button">
+        <span>Add to Reading List  </span>
         <Toggle/>
       </div>
   );
