@@ -30,26 +30,13 @@
   transition: transform 0.3s;
 }
 
-span.favorite-button{
-  padding-top: 15px
+.favorite-button {
+  padding: 11px;
 }
 
 .book-card:hover{
   cursor: pointer;
   transform: scale(1.03);
-}
-
-.overlay {
-  position: absolute;
-  background: rgba(217, 207, 207, 0.8);
-  width: 100%;
-  transition: 0.7s ease;
-  opacity: 0;
-  bottom: 0;
-  font-size: 18px;
-  padding: 20px;
-  text-align: center;
-  cursor: pointer;
 }
 
 .favorite-button:hover{

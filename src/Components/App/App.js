@@ -2,11 +2,10 @@ import React, { useState, useEffect} from "react";
 import Header from '../Header/Header'
 import SearchBar from "../SearchBar /SearchBar";
 import Books from '../Books/Books'
-import FavoriteButton from "../FavoriteButton/FavoriteButton";
-import CompletedBookButton from "../CompletedBookButton/CompletedBookButton";
-import {getBooks} from "../../utilities/ApiCalls";
+// import {getBooks} from "../../utilities/ApiCalls";
+import testData from "../../assets/testData";
 import utils from "../../utilities/utils";
-import {Link, Route, Redirect} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
 import './_app.scss';
 
 function App() {
@@ -15,19 +14,26 @@ function App() {
   const [searchedBooks, setSearchedBooks] = useState('')
   const [favorites, setFavorites] = useState([])
   const [completedBooks, setCompletedBooks] = useState([])
-  const [error, setError] = useState('')
+  const [error] = useState('')
+
 
   useEffect(() => {
-        getBooks()
-            .then(data => {
-              const narrowObject = data.entries
-              const finalData = utils.removeDuplicates(narrowObject)
-              setBooks(finalData)
-      })
-            .catch(error => {
-              setError(error)
-            })
-    }, [])
+    const narrowObject = testData.entries
+    utils.removeDuplicates(narrowObject)
+    setBooks(narrowObject)
+  }, [])
+
+  // useEffect(() => {
+  //       getBooks()
+  //           .then(data => {
+  //             const narrowObject = data.entries
+  //             const finalData = utils.removeDuplicates(narrowObject)
+  //             setBooks(finalData)
+  //     })
+  //           .catch(error => {
+  //             setError(error)
+  //           })
+  //   }, [])
 
   const pushSearchResults = (search) => {
     setSearchedBooks(search)
@@ -48,6 +54,7 @@ function App() {
     <div className="App">
       <div className='site-container'>
         <Header/>
+        <Switch>
           <Route exact path='/'
                  render={() => (
                      !error ?
@@ -64,15 +71,35 @@ function App() {
                   bookGroup={setBooks}
                   favoritesBox={favorites}
                   favoritedBooks={setFavorites}
-                  favoriteButtonComponent={FavoriteButton}
                   completedBooks={completedBooks}
                   completeGroup={setCompletedBooks}
-                  addCompletedBookComponent={CompletedBookButton}
                   displayErrorMessage={displayErrorMessage}/>
             </div>
                          </> : displayErrorMessage()
                  )} />
-          <Redirect to='/' />
+            <Route exact path='/readinglist'
+                   render={() => (
+                       !error ?
+                           <>
+                             <SearchBar
+                                 pushSearchResults={pushSearchResults}
+                                 searchValue={searchedBooks}
+                                 setSearchValue={setSearchedBooks}
+                                 displayErrorMessage={displayErrorMessage}/>
+                             <div className='card-display'>
+                   <Books
+                   books={favorites}
+                   searchedBooks={searchedBooks}
+                   bookGroup={setBooks}
+                   favoritesBox={favorites}
+                   favoritedBooks={setFavorites}
+                   completedBooks={completedBooks}
+                   completeGroup={setCompletedBooks}
+                   displayErrorMessage={displayErrorMessage}/>
+                             </div>
+                           </> : displayErrorMessage()
+              )} />
+        </Switch>
       </div>
     </div>
   );

@@ -106,7 +106,7 @@ describe('Show main view of kings castle App', () => {
       cy.visit('http://localhost:3000/')
     })
 
-    it('User should be able to add books to read-list or completed books', () => {
+    it('User should be able to add books to read-list', () => {
       cy.visit('http://localhost:3000/')
       cy.get('.toggle').click({ multiple: true })
     })
