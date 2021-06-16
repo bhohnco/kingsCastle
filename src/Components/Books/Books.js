@@ -70,10 +70,11 @@ Books.propTypes = {
   books:PropTypes.array,
   searchedBooks:PropTypes.string,
   bookGroup:PropTypes.func,
-  favoritedBooks:PropTypes.func,
   favoritesBox:PropTypes.array,
+  favoritedBooks:PropTypes.func,
   key: PropTypes.string,
   title: PropTypes.string,
+  cover: PropTypes.array,
   handleClick: PropTypes.string,
   bookImage: PropTypes.string,
   displayErrorMessage: PropTypes.func

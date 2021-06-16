@@ -19,6 +19,9 @@ const SearchBar = ({ pushSearchResults }) => {
 }
 
 SearchBar.prototype = {
-  pushSearchResults: PropTypes.func
+  pushSearchResults: PropTypes.func,
+  searchedBooks:PropTypes.string,
+  setSearchedBooks:PropTypes.func,
+  displayErrorMessage: PropTypes.func
 }
 export default SearchBar;

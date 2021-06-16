@@ -9,7 +9,6 @@ const FavoriteButton = ({book, favoritesBox, favoritedBooks, }) => {
   };
 
   const addFavoriteBook = (book) => {
-    // const breakDownBook = {book}
     favoritedBooks((favoritesBox) => [
         ...favoritesBox,
       book,
@@ -18,9 +17,8 @@ const FavoriteButton = ({book, favoritesBox, favoritedBooks, }) => {
   }
 
   return (
-      <div onClick={()=>addFavoriteBook(book)} className="favorite-button">
-        <span>Add to Reading List  </span>
-      </div>
+      <button onClick={()=>addFavoriteBook(book)} className="favorite-button">
+        Add to Reading List  </button>
   );
 };
 
