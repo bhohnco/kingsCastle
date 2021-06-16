@@ -1,32 +1,34 @@
 import React from 'react';
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 import PropTypes from "prop-types";
 import '../../assets/kingCovers/kingcollection.jpeg'
 
-const Books = ({books, favoriteButtonComponent, favoritesBox, favoritedBooks, addCompletedBookComponent, completedBooks, completeGroup, searchedBooks, displayErrorMessage }) => {
-
-  const FavoriteComponent = favoriteButtonComponent
-  const AddBookComponent = addCompletedBookComponent
+const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayErrorMessage }) => {
 
   if (searchedBooks.length) {
     const searchBooks = books?.filter(book => {
+      console.log(books)
+      console.log(searchedBooks)
+      console.log(book.title)
       return book.title.toLowerCase().includes(searchedBooks.toLowerCase())
     })
-    return searchBooks.map(book => {
-      const {title, key, covers} = book
+    return searchBooks.map((book, i) => {
+      const {title, covers} = book
       let coverImage = covers
       if(Array.isArray(covers)) {
         coverImage = covers[0]
       }
       const bookImage = `http://covers.openlibrary.org/b/id/${coverImage}-M.jpg`
-      return <div className="book-link" key={key}>
-        <AddBookComponent book={book} completedBooks={completedBooks} completeGroup={completeGroup}/>
+      return <div className="book-link" key={i}>
         <img className="book-card"
-             key={key}
+             key={i}
              src={bookImage}
              alt={title}
              id={title}
         />
-        <FavoriteComponent book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}/>
+        <div className="favorite-button">
+          <FavoriteButton book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks} searchedBooks={favoritedBooks}/>
+        </div>
         <h3 className="card-title">{title}</h3>
         <div>
         </div>
@@ -35,25 +37,24 @@ const Books = ({books, favoriteButtonComponent, favoritesBox, favoritedBooks, ad
   }
 
   if (books.length) {
-    return books.map(book => {
-      const {title, key, covers} = book
+    return books.map((book, i) => {
+      const {title, covers} = book
       let coverImage = covers
       if(Array.isArray(covers)) {
         coverImage = covers[0]
       }
       const bookImageCover = `http://covers.openlibrary.org/b/id/${coverImage}-M.jpg`
-      return <div className="book-link" key={key}>
+      return <div className="book-link" key={i}>
         <div className="completed">
-        <AddBookComponent book={book} completedBooks={completedBooks} completeGroup={completeGroup}/>
       </div>
         <img className="book-card"
-             key={key}
+             key={i}
              src={bookImageCover}
              alt={title}
              id={title}
         />
-        <FavoriteComponent book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
-                           className='overlay d-flex align-items-center justify-content-center'/>
+        <FavoriteButton book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
+        />
         <h3 className="card-title">{title}</h3>
         <div>
         </div>
@@ -66,18 +67,20 @@ const Books = ({books, favoriteButtonComponent, favoritesBox, favoritedBooks, ad
 };
 
 Books.propTypes = {
-  favoritesBox:PropTypes.array,
   books:PropTypes.array,
+  searchedBooks:PropTypes.string,
+  bookGroup:PropTypes.func,
   favoritedBooks:PropTypes.func,
-  completedBooks:PropTypes.array,
-  favoriteButtonComponent:PropTypes.func,
-  addCompletedBookComponent:PropTypes.func,
+  favoritesBox:PropTypes.array,
   key: PropTypes.string,
   title: PropTypes.string,
   handleClick: PropTypes.string,
   bookImage: PropTypes.string,
   displayErrorMessage: PropTypes.func
-};
+}
+Books.defaultProps = {
+  searchedBooks:[]
+}
 
 export default Books;
 
