@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import Toggle from '../Toggle/Toogle'
 
 
 const FavoriteButton = ({book, favoritesBox, favoritedBooks, }) => {
@@ -21,7 +20,6 @@ const FavoriteButton = ({book, favoritesBox, favoritedBooks, }) => {
   return (
       <div onClick={()=>addFavoriteBook(book)} className="favorite-button">
         <span>Add to Reading List  </span>
-        <Toggle/>
       </div>
   );
 };
