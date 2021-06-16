@@ -10,19 +10,31 @@
   border-radius: 10px;
   color: #f88d27;
   margin-bottom: 15px;
-  font-size: 30px;
 }
 
 .title {
   display: flex;
-  font-size: 40px;
   margin-left: 6%;
+  font-size: 30px;
+}
+
+.page-quote{
+  justify-content: center;
+  font-size: 25px;
 }
 
 .header-button:hover {
   background-color: #240707;
 }
 
+.reading-list-button {
+  border-radius: 10px;
+  width: 175px;
+  height: 50px;
+  text-align:  center;
+  margin-left: -26%;
+  color:#D06800FF;
+}
 @media screen and (max-width: 1024px) {
 
   .App-header {
