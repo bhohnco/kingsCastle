@@ -2,17 +2,25 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 81%
-}
-
-.completed{
-  padding-bottom: 15px;
+  width: 90%
 }
 
 .book-link {
   width: 19.25%;
   margin-top: 15px;
   padding-bottom: 15px;
+}
+
+.card-title{
+  font-size: 22px;
+  padding-top: 15px;
+  height: 2em;
+  //margin-left: auto;
+  //margin-right: auto;
+  position: relative;
+  //top: 50%;
+  transform: translateY(-50%);
+  color:#D06800FF;
 }
 
 .book-card {
@@ -45,11 +53,6 @@
 }
 .path:hover{
   cursor: pointer;
-}
-
-.card-title{
-  padding-top: 15px;
-  color:#D06800FF;
 }
 
 

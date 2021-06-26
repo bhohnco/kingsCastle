@@ -1,36 +1,33 @@
 import React from 'react';
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
 import PropTypes from "prop-types";
-import '../../assets/kingCovers/kingcollection.jpeg'
+
 
 const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayErrorMessage }) => {
 
   if (searchedBooks.length) {
     const searchBooks = books?.filter(book => {
-      console.log(books)
-      console.log(searchedBooks)
-      console.log(book.title)
-      return book.title.toLowerCase().includes(searchedBooks.toLowerCase())
+      return book.photoTitle.toLowerCase().includes(searchedBooks.toLowerCase())
     })
     return searchBooks.map((book, i) => {
-      const {title, covers} = book
-      let coverImage = covers
-      if(Array.isArray(covers)) {
-        coverImage = covers[0]
-      }
-      const bookImage = `http://covers.openlibrary.org/b/id/${coverImage}-M.jpg`
+      const {photoTitle, photoUrl} = book
+      // let coverImage = photoUrl
+      // if(Array.isArray(photoUrl)) {
+      //   coverImage = photoUrl[0]
+      // }
       return <div className="book-link" key={i}>
-        <img className="book-card"
+        <h3 className="card-title">{photoTitle}</h3>
+        <img className="book-card" src={photoUrl} style={{ backgroundImage: `url(${photoUrl})`
+        }}
              key={i}
-             src={bookImage}
-             alt={title}
-             id={title}
+             alt={photoTitle}
+             id={photoTitle}
         />
-        <div className="favorite-button">
-          <FavoriteButton book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks} searchedBooks={favoritedBooks}/>
-        </div>
-        <h3 className="card-title">{title}</h3>
-        <div>
+        <div className="add-to-reading">
+          <FavoriteButton book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
+          />
+          <div/>
+
         </div>
       </div>
     })
@@ -38,27 +35,26 @@ const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayError
 
   if (books.length) {
     return books.map((book, i) => {
-      const {title, covers} = book
-      let coverImage = covers
-      if(Array.isArray(covers)) {
-        coverImage = covers[0]
-      }
-      const bookImageCover = `http://covers.openlibrary.org/b/id/${coverImage}-M.jpg`
+      const {photoTitle, photoUrl} = book
+      // let coverImage = photoUrl
+      // if(Array.isArray(photoUrl)) {
+      //   coverImage = photoUrl
+      // }
       return <div className="book-link" key={i}>
-        <div className="completed">
-      </div>
-        <img className="book-card"
+        <h3 className="card-title">{photoTitle}</h3>
+        <img className="book-card" src={photoUrl} style={{ backgroundImage: `url(${photoUrl})`
+        }}
              key={i}
-             src={bookImageCover}
-             alt={title}
-             id={title}
+             alt={photoTitle}
+             id={photoTitle}
         />
+        <div className="add-to-reading">
         <FavoriteButton book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
         />
-        <h3 className="card-title">{title}</h3>
-        <div>
+          <div/>
+
         </div>
-      </div>
+        </div>
     })
   }
   else{

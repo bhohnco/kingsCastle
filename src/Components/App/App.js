@@ -2,7 +2,8 @@ import React, { useState, useEffect} from "react";
 import Header from '../Header/Header'
 import SearchBar from "../SearchBar /SearchBar";
 import Books from '../Books/Books'
-import {getBooks} from "../../utilities/ApiCalls";
+// import {getBooks} from "../../utilities/ApiCalls";
+import bookData from "../../bookData";
 import utils from "../../utilities/utils";
 import {Link, Route, Switch} from "react-router-dom";
 import './_app.scss';
@@ -17,16 +18,10 @@ function App() {
 
 
   useEffect(() => {
-        getBooks()
-            .then(data => {
-              const narrowObject = data.entries
-              const finalData = utils.removeDuplicates(narrowObject)
-              setBooks(finalData)
-      })
-            .catch(error => {
-              setError(error)
-            })
-    }, [])
+    const narrowObject = bookData
+    utils.removeDuplicates(narrowObject)
+    setBooks(narrowObject)
+  }, [])
 
   const pushSearchResults = (search) => {
     setSearchedBooks(search)
