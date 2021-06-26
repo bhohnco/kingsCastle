@@ -1,233 +1,233 @@
-import '../src/assets/kingCovers/JFK.jpeg'
-import '../src/assets/kingCovers/Wovles of Calla.jpeg'
-import '../src/assets/kingCovers/nightmares.jpeg'
-import '../src/assets/kingCovers/blackhouse.jpeg'
-import '../src/assets/kingCovers/the stand.jpeg'
-import '../src/assets/kingCovers/FourPastmidnight.jpeg'
-import '../src/assets/kingCovers/NeedfulThings.png'
-import '../src/assets/kingCovers/Geralds Game.png'
-import '../src/assets/kingCovers/Everythings.jpeg'
-import '../src/assets/kingCovers/IT.png'
-import '../src/assets/kingCovers/full dark no stars .jpeg'
-import '../src/assets/kingCovers/bag of bones .jpeg'
-import '../src/assets/kingCovers/Rose Madder.png'
-import '../src/assets/kingCovers/doctorsleep.jpeg'
-import '../src/assets/kingCovers/Joyland.jpeg'
-import '../src/assets/kingCovers/under the dome.jpeg'
-import '../src/assets/kingCovers/revival.jpeg'
-import '../src/assets/kingCovers/lisey story.jpeg'
-import '../src/assets/kingCovers/Just after sunset.jpeg'
-import '../src/assets/kingCovers/Duma key.jpeg'
-import '../src/assets/kingCovers/Mr. Mercedes.jpeg'
-import '../src/assets/kingCovers/Danse Macabre.jpeg'
-import '../src/assets/kingCovers/cujo.png'
-import '../src/assets/kingCovers/Different Seasons.png'
-import '../src/assets/kingCovers/Christine.jpeg'
-import '../src/assets/kingCovers/petsematary.jpeg'
-import '../src/assets/kingCovers/Skeleton Crew.png'
-import '../src/assets/kingCovers/Eyes of the Dragon.png'
-import '../src/assets/kingCovers/Misery.png'
-import '../src/assets/kingCovers/The Tommyknockers.png'
-import '../src/assets/kingCovers/The Dark Half.png'
-import '../src/assets/kingCovers/thewastelands.jpeg'
-import '../src/assets/kingCovers/NeedfulThings.png'
-import '../src/assets/kingCovers/Insomnia.png'
-import '../src/assets/kingCovers/TOmGordon.jpeg'
-import '../src/assets/kingCovers/On writing.jpeg'
-import '../src/assets/kingCovers/dreamcatcher.jpeg'
-import '../src/assets/kingCovers/buick 8.jpeg'
-import '../src/assets/kingCovers/song of suz.jpeg'
-import '../src/assets/kingCovers/Cell.jpeg'
-import '../src/assets/kingCovers/Finders Keepers.jpeg'
-import '../src/assets/kingCovers/end of watch.jpeg'
-import '../src/assets/kingCovers/outsider.jpeg'
-import '../src/assets/kingCovers/elevation.jpeg'
-import '../src/assets/kingCovers/theInstitute.jpeg'
+import JFK from '../src/assets/kingCovers/JFK.jpeg'
+import Wolves from './assets/kingCovers/WolvesOfCalla.jpeg'
+import Nightmares from '../src/assets/kingCovers/NightmaresAndDreamscapes.jpeg'
+import BlackHouse from '../src/assets/kingCovers/BlackHouse.jpeg'
+import theStand from '../src/assets/kingCovers/TheStand.jpeg'
+import FourPastMidnight from '../src/assets/kingCovers/FourPastMidnight.jpeg'
+import NeedfulThings from '../src/assets/kingCovers/NeedfulThings.jpeg'
+import GeraldsGame from '../src/assets/kingCovers/GeraldsGame.jpeg'
+import EverythingsEventual from '../src/assets/kingCovers/EverythingsEventual.jpeg'
+import It from '../src/assets/kingCovers/IT.jpeg'
+import FullDarkNoStars from '../src/assets/kingCovers/FullDarkNoStars.jpeg'
+import BagOfBones from '../src/assets/kingCovers/BagOfBones.jpeg'
+import RoseMadder from '../src/assets/kingCovers/RoseMadder.jpeg'
+import DoctorSleep from '../src/assets/kingCovers/DoctorSleep.jpeg'
+import Joyland from '../src/assets/kingCovers/Joyland.jpeg'
+import UnderTheDome from '../src/assets/kingCovers/UnderTheDome.jpeg'
+import Revival from '../src/assets/kingCovers/Revival.jpeg'
+import LiseyStory from '../src/assets/kingCovers/LiseyStory.jpeg'
+import JustAfterSunset from '../src/assets/kingCovers/JustAfterSunset.jpeg'
+import DumaKey from '../src/assets/kingCovers/DumaKey.jpeg'
+import MrMercedes from '../src/assets/kingCovers/MrMercedes.jpeg'
+import DanseMacabre from '../src/assets/kingCovers/DanseMacabre.jpeg'
+import Cujo from '../src/assets/kingCovers/Cujo.jpeg'
+import DifferentSeasons from '../src/assets/kingCovers/DifferentSeasons.jpeg'
+import Christine from '../src/assets/kingCovers/Christine.jpeg'
+import PetSematary from '../src/assets/kingCovers/PetSematary.jpeg'
+import SkeletonCrew from '../src/assets/kingCovers/SkeletonCrew.jpeg'
+import EyesOfTheDragon from '../src/assets/kingCovers/EyesOfTheDragon.jpeg'
+import Misery from '../src/assets/kingCovers/Misery.jpeg'
+import TheTommyknockers from '../src/assets/kingCovers/TheTommyknockers.jpeg'
+import TheDarkHalf from '../src/assets/kingCovers/TheDarkHalf.jpeg'
+import TheWastelands from '../src/assets/kingCovers/TheWastelands.jpeg'
+// import Joyland from '../src/assets/kingCovers/NeedfulThings.jpeg'
+import Insomnia from '../src/assets/kingCovers/Insomnia.jpeg'
+import TomGordon from '../src/assets/kingCovers/TomGordon.jpeg'
+import OnWriting from '../src/assets/kingCovers/OnWriting.jpeg'
+import DreamCatcher from '../src/assets/kingCovers/DreamCatcher.jpeg'
+import Buick8 from '../src/assets/kingCovers/Buick8.jpeg'
+import SongOfSuzanna from '../src/assets/kingCovers/SongOfSuzanna.jpeg'
+import Cell from '../src/assets/kingCovers/Cell.jpeg'
+import FindersKeepers from '../src/assets/kingCovers/FindersKeepers.jpeg'
+import EndOfWatch from '../src/assets/kingCovers/EndOfWatch.jpeg'
+import TheOutsider from '../src/assets/kingCovers/TheOutsider.jpeg'
+import Elevation from '../src/assets/kingCovers/Elevation.jpeg'
+import TheInstitute from '../src/assets/kingCovers/TheInstitute.jpeg'
 
 
-const images = [
+const bookData = [
 
     {
       photoTitle: '11/22/63',
-      photoUrl: '../src/assets/kingCovers/JFK.png',
+      photoUrl: JFK,
     },
     {
       photoTitle: 'The Dark Tower V: Wolves of the Calla',
-      photoUrl: '../src/assets/kingCovers/Wovles of Calla.jpeg',
+      photoUrl: Wolves,
     },
     {
       photoTitle: 'Nightmares and Dreamscapes',
-      photoUrl: '../src/assets/kingCovers/nightmares.jpeg',
+      photoUrl: Nightmares,
     },
     {
       photoTitle: 'Black House',
-      photoUrl: '../src/assets/kingCovers/blackhouse.jpeg',
+      photoUrl: BlackHouse,
     },
     {
       photoTitle: 'The Stand',
-      photoUrl: '../src/assets/kingCovers/the stand.jpeg',
+      photoUrl: theStand,
     },
     {
       photoTitle: 'Four Past Midnight',
-      photoUrl: '../src/assets/kingCovers/FourPastmidnight.jpeg',
+      photoUrl: FourPastMidnight,
     },
     {
       photoTitle: 'Needful Things',
-      photoUrl: '.../src/assets/kingCovers/NeedfulThings.png',
+      photoUrl: NeedfulThings,
     },
     {
       photoTitle: 'Gerald\'s Game',
-      photoUrl: '../src/assets/kingCovers/Geralds Game.png',
+      photoUrl: GeraldsGame,
     },
     {
       photoTitle: 'Everything\'s Eventual : 14 Dark Tales',
-      photoUrl: '../src/assets/kingCovers/Everythings.jpeg',
+      photoUrl: EverythingsEventual,
     },
     {
       photoTitle: 'It',
-      photoUrl: '../src/assets/kingCovers/IT.png',
+      photoUrl: It,
     },
     {
       photoTitle: 'Full Dark, No Stars',
-      photoUrl: '../src/assets/kingCovers/full dark no stars .jpeg',
+      photoUrl: FullDarkNoStars,
     },
     {
       photoTitle: 'Bag of Bones',
-      photoUrl: '../src/assets/kingCovers/bag of bones .jpeg',
+      photoUrl: BagOfBones,
     },
     {
       photoTitle: 'Rose Madder',
-      photoUrl: '../src/assets/kingCovers/Rose Madder.png',
+      photoUrl: RoseMadder,
     },
     {
       photoTitle: 'Doctor Sleep',
-      photoUrl: '../src/assets/kingCovers/doctorsleep.jpeg',
+      photoUrl: DoctorSleep,
+    },
+    {
+      photoTitle:'Joyland',
+      photoUrl: Joyland,
+    },
+    {
+      photoTitle:'Under the Dome',
+      photoUrl: UnderTheDome,
+    },
+    {
+      photoTitle:'Revival',
+      photoUrl: Revival,
+    },
+    {
+      photoTitle:'Lisey\'s Story',
+      photoUrl: LiseyStory,
+    },
+    {
+      photoTitle:'Just After Sunset',
+      photoUrl: JustAfterSunset,
+    },
+    {
+      photoTitle:'Duma Key',
+      photoUrl: DumaKey,
+    },
+    {
+      photoTitle:'Mr. Mercedes',
+      photoUrl: MrMercedes,
+    },
+    {
+      photoTitle:'Danse Macabre',
+      photoUrl: DanseMacabre,
+    },
+    {
+      photoTitle:'Cujo',
+      photoUrl: Cujo,
+    },
+    {
+      photoTitle:'Different Seasons',
+      photoUrl: DifferentSeasons,
+    },
+    {
+      photoTitle:'Pet Sematary',
+      photoUrl: PetSematary,
+    },
+    {
+      photoTitle:'Skeleton Crew',
+      photoUrl: SkeletonCrew,
+    },
+    {
+      photoTitle:'The Eyes of the Dragon',
+      photoUrl: EyesOfTheDragon,
+    },
+    {
+      photoTitle:'Misery',
+      photoUrl: Misery,
+    },
+    {
+      photoTitle:'The Tommyknockers',
+      photoUrl: TheTommyknockers,
+    },
+    {
+      photoTitle:'The Dark Half',
+      photoUrl: TheDarkHalf,
+    },
+    {
+      photoTitle:'The Waste Lands: The Dark Tower Book III',
+      photoUrl: TheWastelands,
+    },
+    // {
+    //   "photoTitle":'Needful Things: The Last Castle Rock Story',
+    //   "photoUrl":'',
+    // },
+    {
+      photoTitle:'Insomnia',
+      photoUrl: Insomnia,
+    },
+    {
+      photoTitle:'The Girl Who Loved Tom Gordon',
+      photoUrl: TomGordon,
+    },
+    {
+      photoTitle:'On Writing:  a Memoir of the Craft',
+      photoUrl: OnWriting,
+    },
+    {
+      photoTitle:'Dreamcatcher',
+      photoUrl: DreamCatcher,
+    },
+    {
+      photoTitle:'From a Buick 8',
+      photoUrl: Buick8,
+    },
+    {
+      photoTitle:'The Dark Tower VI ',
+      photoUrl: SongOfSuzanna,
+    },
+    {
+      photoTitle:'Cell',
+      photoUrl: Cell,
+    },
+    {
+      photoTitle:'Finders Keepers',
+      photoUrl: FindersKeepers,
+    },
+    {
+      photoTitle:'End of Watch',
+      photoUrl: EndOfWatch,
+    },
+    {
+      photoTitle:'The Outsider',
+      photoUrl: TheOutsider,
+    },
+    {
+      photoTitle:'Elevation',
+      photoUrl:Elevation,
+    },
+    {
+      photoTitle:'The Institute',
+      photoUrl:TheInstitute,
+    },
+    {
+      photoTitle:'Christine',
+      photoUrl: Christine
     }
-//     // {
-//     //   "photoTitle":'Joyland',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Under the Dome',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Revival',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Lisey\'s Story',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Just After Sunset',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Duma Key',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Mr. Mercedes',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Danse Macabre',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Cujo',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Different Seasons',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Pet Sematary',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Skeleton Crew',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'The Eyes of the Dragon',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Misery',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'The Tommyknockers',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'The Dark Half',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'The Waste Lands: The Dark Tower Book III',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Needful Things: The Last Castle Rock Story',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Insomnia',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'The Girl Who Loved Tom Gordon',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'On Writing:  a Memoir of the Craft',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Dreamcatcher',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'From a Buick 8',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'The Dark Tower VI ',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Cell',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Finders Keepers',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'End of Watch',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'The Outsider',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Elevation',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'The Institute',
-//     //   "photoUrl":'',
-//     // },
-//     // {
-//     //   "photoTitle":'Christine',
-//     //   "photoUrl":''
-//     // }
   ]
 
 
- export default images;
+ export default bookData;
