@@ -5,9 +5,8 @@ const SearchBar = ({ pushSearchResults }) => {
   const searchValue = useRef()
 
   return (
-      <div className='search'>
+      <div className='search-bar'>
         <input
-    className='search-bar'
     type="text"
     name="input"
     ref={searchValue}
