@@ -7,21 +7,21 @@ const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayError
 
   if (searchedBooks.length) {
     const searchBooks = books?.filter(book => {
-      return book.photoTitle.toLowerCase().includes(searchedBooks.toLowerCase())
+      return book.bookTitle.toLowerCase().includes(searchedBooks.toLowerCase())
     })
     return searchBooks.map((book, i) => {
-      const {photoTitle, photoUrl} = book
+      const {bookTitle, photoUrl} = book
       // let coverImage = photoUrl
       // if(Array.isArray(photoUrl)) {
       //   coverImage = photoUrl[0]
       // }
       return <div className="book-link" key={i}>
-        <h3 className="card-title">{photoTitle}</h3>
+        <h3 className="card-title">{bookTitle}</h3>
         <img className="book-card" src={photoUrl} style={{ backgroundImage: `url(${photoUrl})`
         }}
              key={i}
-             alt={photoTitle}
-             id={photoTitle}
+             alt={bookTitle}
+             id={bookTitle}
         />
         <div className="add-to-reading">
           <FavoriteButton book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
@@ -34,19 +34,20 @@ const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayError
   }
 
   if (books.length) {
+    console.log(books)
     return books.map((book, i) => {
-      const {photoTitle, photoUrl} = book
+      const {bookTitle, photoUrl} = book
       // let coverImage = photoUrl
       // if(Array.isArray(photoUrl)) {
       //   coverImage = photoUrl
       // }
       return <div className="book-link" key={i}>
-        <h3 className="card-title">{photoTitle}</h3>
+        <h3 className="card-title">{bookTitle}</h3>
         <img className="book-card" src={photoUrl} style={{ backgroundImage: `url(${photoUrl})`
         }}
              key={i}
-             alt={photoTitle}
-             id={photoTitle}
+             alt={bookTitle}
+             id={bookTitle}
         />
         <div className="add-to-reading">
         <FavoriteButton book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
