@@ -14,7 +14,6 @@ describe('ReadingList', () => {
     cy.wait(2500)
     cy.get('.reading-list-button').click()
     cy.get('.card-display').should('have.length', 1)
-    cy.get('.card-title').should('have.text', "Peur bleue")
     })
   })
 
