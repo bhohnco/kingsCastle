@@ -11,7 +11,7 @@
 
 ### Description
 ##### Niche Audience
-##### Are you a fan of Stephen King but have a hard time keep track of his books? Or you want to find something that is non-horror by him, but don't know where to start? King's Castle holds all of his works, along with cover photos, and soon to be added book descriptions. The user has the ability to add a book to their reading-list or check a book off as completed. They can also search the database for any book title. 
+##### Are you a fan of Stephen King but have a hard time keep track of his books? Or you want to find something that is non-horror by him, but don't know where to start? King's Castle holds all of his works, along with cover photos, and soon to be added book descriptions. The user has the ability to add a book to their reading-list. They can also search the database for any book title. 
 
 ## Future Iterations
 ---
