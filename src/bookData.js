@@ -46,185 +46,292 @@ import TheInstitute from '../src/assets/kingCovers/TheInstitute.jpeg'
 
 
 const bookData = [
-
+  // {
+  //   bookTitle: 'Carrie',
+  //   photoUrl: Carrie,
+  //   overview: 'Carrie is an American epistolary novel and author Stephen King's first published novel, released on April 5th, 1974, with an approximate first print run of 30,000 copies. Set in the then-future year of 1979, it revolves around the eponymous Carrietta N. White a misfit and bullied high school girl who uses her newly discovered telekinetic powers to exact revenge on those who torment her, while in the process causing one of the worst local disasters in American history. Stephen has commented that he finds the work to be "Raw" and "With a surprising power to hurt and horrify". It is one of the most frequently banned books in United States schools. Much of the book is written in an epistolary structure, using newspaper clippings, magazine articles, letters, and excerpts from books to tell how Carrie destroyed the fictional town of Chamberlain, Maine while exacting revenge on her sadistic classmates. Several adaptations of Carrie have been released, including a 1976 film, a 1988 Broadway musical, a 1999 film sequel, a 2002 television film, and a 2013 film remake.',
+  //   genre: 'Horror',
+  //   pageCount: '199',
+  //   dateReleased:'April 5, 1974'
+  // },
+  // {
+  //   bookTitle: 'Salem's Lot',
+  //   photoUrl: SalemsLot,
+  //   overview:
+  //   genre: 'Horror',
+  //   pageCount: '',
+  //   dateReleased:'October 17, 1975'
+  // },
+  // {
+  //   bookTitle: 'The Shinning',
+  //   photoUrl: TheShinning,
+  //   overview: '"Isolated for months on end Jack Torrance, an abusive alcoholic writer has been given the responsibility of caretaker of the famous "Overlook". With his beautiful and strong willed Wife- Wendy and misfit son Danny, the three will come to learn that they are not alone in the Hotel which they reside in."',
+  //   genre: 'Horror',
+  //   pageCount: '447',
+  //   dateReleased:'January 28, 1977'
+  // },
+  // {
+  //   bookTitle: 'Rage',
+  //   photoUrl: Rage,
+  //   overview: '',
+  //   genre: '',
+  //   pageCount: '',
+  //   dateReleased:''
+  // },
+  // {
+  //   bookTitle: '11/22/63',
+  //   photoUrl: JFK,
+  //   overview: '',
+  //   genre: '',
+  //   pageCount: '',
+  //   dateReleased:''
+  // },
+  // {
+  //   bookTitle: '11/22/63',
+  //   photoUrl: JFK,
+  //   overview: '',
+  //   genre: '',
+  //   pageCount: '',
+  //   dateReleased:''
+  // },
+  // {
+  //   bookTitle: '11/22/63',
+  //   photoUrl: JFK,
+  //   overview: '',
+  //   genre: '',
+  //   pageCount: '',
+  //   dateReleased:''
+  // },
+  // {
+  //   bookTitle: '11/22/63',
+  //   photoUrl: JFK,
+  //   overview: '',
+  //   genre: '',
+  //   pageCount: '',
+  //   dateReleased:''
+  // },
+  // {
+  //   bookTitle: '11/22/63',
+  //   photoUrl: JFK,
+  //   overview: '',
+  //   genre: '',
+  //   pageCount: '',
+  //   dateReleased:''
+  // },
+  // {
+  //   bookTitle: '11/22/63',
+  //   photoUrl: JFK,
+  //   overview: '',
+  //   genre: '',
+  //   pageCount: '',
+  //   dateReleased:''
+  // },
+  // {
+  //   bookTitle: '11/22/63',
+  //   photoUrl: JFK,
+  //   overview: '',
+  //   genre: '',
+  //   pageCount: '',
+  //   dateReleased:''
+  // },
+  // {
+  //   bookTitle: '11/22/63',
+  //   photoUrl: JFK,
+  //   overview: '',
+  //   genre: '',
+  //   pageCount: '',
+  //   dateReleased:''
+  // },
+  // {
+  //   bookTitle: '11/22/63',
+  //   photoUrl: JFK,
+  //   overview: '',
+  //   genre: '',
+  //   pageCount: '',
+  //   dateReleased:''
+  // },
     {
-      photoTitle: '11/22/63',
+      bookTitle: '11/22/63',
       photoUrl: JFK,
+      overview: '',
+      genre: '',
+      pageCount: '',
+      dateReleased:''
     },
     {
-      photoTitle: 'The Dark Tower V: Wolves of the Calla',
+      bookTitle: 'The Dark Tower V: Wolves of the Calla',
       photoUrl: Wolves,
     },
     {
-      photoTitle: 'Nightmares and Dreamscapes',
+      bookTitle: 'Nightmares and Dreamscapes',
       photoUrl: Nightmares,
     },
     {
-      photoTitle: 'Black House',
+      bookTitle: 'Black House',
       photoUrl: BlackHouse,
     },
     {
-      photoTitle: 'The Stand',
+      bookTitle: 'The Stand',
       photoUrl: theStand,
     },
     {
-      photoTitle: 'Four Past Midnight',
+      bookTitle: 'Four Past Midnight',
       photoUrl: FourPastMidnight,
     },
     {
-      photoTitle: 'Needful Things',
+      bookTitle: 'Needful Things',
       photoUrl: NeedfulThings,
     },
     {
-      photoTitle: 'Gerald\'s Game',
+      bookTitle: 'Gerald\'s Game',
       photoUrl: GeraldsGame,
     },
     {
-      photoTitle: 'Everything\'s Eventual : 14 Dark Tales',
+      bookTitle: 'Everything\'s Eventual : 14 Dark Tales',
       photoUrl: EverythingsEventual,
     },
     {
-      photoTitle: 'It',
+      bookTitle: 'It',
       photoUrl: It,
     },
     {
-      photoTitle: 'Full Dark, No Stars',
+      bookTitle: 'Full Dark, No Stars',
       photoUrl: FullDarkNoStars,
     },
     {
-      photoTitle: 'Bag of Bones',
+      bookTitle: 'Bag of Bones',
       photoUrl: BagOfBones,
     },
     {
-      photoTitle: 'Rose Madder',
+      bookTitle: 'Rose Madder',
       photoUrl: RoseMadder,
     },
     {
-      photoTitle: 'Doctor Sleep',
+      bookTitle: 'Doctor Sleep',
       photoUrl: DoctorSleep,
     },
     {
-      photoTitle:'Joyland',
+      bookTitle:'Joyland',
       photoUrl: Joyland,
     },
     {
-      photoTitle:'Under the Dome',
+      bookTitle:'Under the Dome',
       photoUrl: UnderTheDome,
     },
     {
-      photoTitle:'Revival',
+      bookTitle:'Revival',
       photoUrl: Revival,
     },
     {
-      photoTitle:'Lisey\'s Story',
+      bookTitle:'Lisey\'s Story',
       photoUrl: LiseyStory,
     },
     {
-      photoTitle:'Just After Sunset',
+      bookTitle:'Just After Sunset',
       photoUrl: JustAfterSunset,
     },
     {
-      photoTitle:'Duma Key',
+      bookTitle:'Duma Key',
       photoUrl: DumaKey,
     },
     {
-      photoTitle:'Mr. Mercedes',
+      bookTitle:'Mr. Mercedes',
       photoUrl: MrMercedes,
     },
     {
-      photoTitle:'Danse Macabre',
+      bookTitle:'Danse Macabre',
       photoUrl: DanseMacabre,
     },
     {
-      photoTitle:'Cujo',
+      bookTitle:'Cujo',
       photoUrl: Cujo,
     },
     {
-      photoTitle:'Different Seasons',
+      bookTitle:'Different Seasons',
       photoUrl: DifferentSeasons,
     },
     {
-      photoTitle:'Pet Sematary',
+      bookTitle:'Pet Sematary',
       photoUrl: PetSematary,
     },
     {
-      photoTitle:'Skeleton Crew',
+      bookTitle:'Skeleton Crew',
       photoUrl: SkeletonCrew,
     },
     {
-      photoTitle:'The Eyes of the Dragon',
+      bookTitle:'The Eyes of the Dragon',
       photoUrl: EyesOfTheDragon,
     },
     {
-      photoTitle:'Misery',
+      bookTitle:'Misery',
       photoUrl: Misery,
     },
     {
-      photoTitle:'The Tommyknockers',
+      bookTitle:'The Tommyknockers',
       photoUrl: TheTommyknockers,
     },
     {
-      photoTitle:'The Dark Half',
+      bookTitle:'The Dark Half',
       photoUrl: TheDarkHalf,
     },
     {
-      photoTitle:'The Waste Lands: The Dark Tower Book III',
+      bookTitle:'The Waste Lands: The Dark Tower Book III',
       photoUrl: TheWastelands,
     },
     // {
-    //   "photoTitle":'Needful Things: The Last Castle Rock Story',
+    //   "bookTitle":'Needful Things: The Last Castle Rock Story',
     //   "photoUrl":'',
     // },
     {
-      photoTitle:'Insomnia',
+      bookTitle:'Insomnia',
       photoUrl: Insomnia,
     },
     {
-      photoTitle:'The Girl Who Loved Tom Gordon',
+      bookTitle:'The Girl Who Loved Tom Gordon',
       photoUrl: TomGordon,
     },
     {
-      photoTitle:'On Writing:  a Memoir of the Craft',
+      bookTitle:'On Writing:  a Memoir of the Craft',
       photoUrl: OnWriting,
     },
     {
-      photoTitle:'Dreamcatcher',
+      bookTitle:'Dreamcatcher',
       photoUrl: DreamCatcher,
     },
     {
-      photoTitle:'From a Buick 8',
+      bookTitle:'From a Buick 8',
       photoUrl: Buick8,
     },
     {
-      photoTitle:'The Dark Tower VI ',
+      bookTitle:'The Dark Tower VI ',
       photoUrl: SongOfSuzanna,
     },
     {
-      photoTitle:'Cell',
+      bookTitle:'Cell',
       photoUrl: Cell,
     },
     {
-      photoTitle:'Finders Keepers',
+      bookTitle:'Finders Keepers',
       photoUrl: FindersKeepers,
     },
     {
-      photoTitle:'End of Watch',
+      bookTitle:'End of Watch',
       photoUrl: EndOfWatch,
     },
     {
-      photoTitle:'The Outsider',
+      bookTitle:'The Outsider',
       photoUrl: TheOutsider,
     },
     {
-      photoTitle:'Elevation',
+      bookTitle:'Elevation',
       photoUrl:Elevation,
     },
     {
-      photoTitle:'The Institute',
+      bookTitle:'The Institute',
       photoUrl:TheInstitute,
     },
     {
-      photoTitle:'Christine',
+      bookTitle:'Christine',
       photoUrl: Christine
     }
   ]
