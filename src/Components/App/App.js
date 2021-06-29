@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from "react";
 import Header from '../Header/Header'
-import SearchBar from "../SearchBar /SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import Books from '../Books/Books'
 // import {getBooks} from "../../utilities/ApiCalls";
 import bookData from "../../bookData";
@@ -18,8 +18,7 @@ function App() {
 
 
   useEffect(() => {
-    const narrowObject = bookData
-    utils.removeDuplicates(narrowObject)
+    const narrowObject = utils.randomArrayShuffle(bookData)
     setBooks(narrowObject)
   }, [])
 
