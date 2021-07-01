@@ -11,10 +11,6 @@ const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayError
     })
     return searchBooks.map((book, i) => {
       const {bookTitle, photoUrl} = book
-      // let coverImage = photoUrl
-      // if(Array.isArray(photoUrl)) {
-      //   coverImage = photoUrl[0]
-      // }
       return <div className="book-link" key={i}>
         <h3 className="card-title">{bookTitle}</h3>
         <img className="book-card" src={photoUrl} style={{ backgroundImage: `url(${photoUrl})`
