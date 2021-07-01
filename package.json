@@ -25,11 +25,11 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "set PORT=3000 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cypress open",
-    "eject": "react-scripts eject",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start http://localhost:3000 cy:run",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -48,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "start-server-and-test": "^1.12.5"
   }
 }
