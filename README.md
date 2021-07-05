@@ -22,7 +22,7 @@
 - Interactive CSS animations
 
 ### Main Page
-![mainpage](https://user-images.githubusercontent.com/71860165/121983050-e69a9b80-cd4d-11eb-9c71-393f3cba9bf1.png)
+![mainpage](https://user-images.githubusercontent.com/71860165/124506013-01c65d00-dd88-11eb-9dc5-3c61b8938522.png)
 
 <!-- ### Mobile / Responsive
 ![mobile](https://user-images.githubusercontent.com/71860165/121983525-b0115080-cd4e-11eb-8257-211514825cab.png) -->
