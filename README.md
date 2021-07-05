@@ -57,8 +57,8 @@
 </p>
 
 ### Planning
-* [Wireframe](https://github.com/michannstoner/articulate/files/6627027/NA-wireframe.pdf) created using Figma
-* Project planning via [GitHub Projects](https://github.com/michannstoner/articulate/projects/1)
+* [Wireframe](https://miro.com/app/board/o9J_lAUJ-NY=/) created using Miro
+* Project planning via [GitHub Projects](https://github.com/bhohnco/kingsCastle/projects/1)
 
 ### Reflections
 #### Overall this was a challenging project when it comes to dealing with open public APIs. The main issues I ran into were due to data errors, the API crashing or not being available, or the site being overloaded. In the end it all came together, but I'm looking forward to adding additional features like sorting the book by genre or subject, and having a top five book list. I would also like to spend some more time on the design and layout of the app. 
