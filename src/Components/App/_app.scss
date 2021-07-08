@@ -2,11 +2,11 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-  position: relative;
-}
+//html,
+//body {
+//  height: 100%;
+//  position: relative;
+//}
 
 .App {
   text-align: center;
@@ -19,8 +19,8 @@ body {
   min-height: 100vh;
   overflow: hidden;
   padding-bottom: 50px;
-  background: #403737;
-  color: #b8abaa;
+  background: #b4b4b4;
+  //color: #b8abaa;
 }
 
 .card-display {
@@ -36,19 +36,6 @@ body {
 
 .overlay:hover{
   cursor: pointer;
-}
-
-
-.overlay {
-  position: absolute;
-  background: rgba(73, 71, 71, 0.8);
-  width: 100%;
-  transition: 0.5s ease;
-  opacity: 0;
-  bottom: 0;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
 }
 
 .add-to-reading{
