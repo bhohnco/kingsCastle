@@ -13,12 +13,12 @@ function App() {
   const [books, setBooks,] = useState([])
   const [searchedBooks, setSearchedBooks] = useState('')
   const [favorites, setFavorites] = useState([])
-  const [completedBooks, setCompletedBooks] = useState([])
   const [error, setError] = useState('')
 
 
   useEffect(() => {
     const narrowObject = utils.randomArrayShuffle(bookData)
+
     setBooks(narrowObject)
   }, [])
 
@@ -59,8 +59,6 @@ function App() {
                   bookGroup={setBooks}
                   favoritesBox={favorites}
                   favoritedBooks={setFavorites}
-                  completedBooks={completedBooks}
-                  completeGroup={setCompletedBooks}
                   displayErrorMessage={displayErrorMessage}/>
             </div>
                          </>
@@ -82,8 +80,6 @@ function App() {
                    bookGroup={setBooks}
                    favoritesBox={favorites}
                    favoritedBooks={setFavorites}
-                   completedBooks={completedBooks}
-                   completeGroup={setCompletedBooks}
                    displayErrorMessage={displayErrorMessage}/>
                              </div>
                            </>
