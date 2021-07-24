@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Popup from 'react-popup';
 
 
-const FavoriteButton = ({book, favoritesBox, favoritedBooks, }) => {
+const AddToReadingList = ({book, favoritesBox, favoritedBooks, }) => {
 
   const saveToLocalStorage = (items) => {
     localStorage.setItem('app-favorites', JSON.stringify(items));
@@ -24,7 +24,7 @@ const FavoriteButton = ({book, favoritesBox, favoritedBooks, }) => {
   );
 };
 
-FavoriteButton.propTypes = {
+AddToReadingList.propTypes = {
   addFavoriteBook: PropTypes.func,
   saveToLocalStorage: PropTypes.string,
   book:PropTypes.object,
@@ -32,5 +32,5 @@ FavoriteButton.propTypes = {
   favoritedBooks:PropTypes.func,
 }
 
-export default FavoriteButton;
+export default AddToReadingList;
 
