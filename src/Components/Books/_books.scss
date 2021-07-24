@@ -35,7 +35,7 @@
   background-position: center center;
   border-radius: 18px;
   box-shadow:  11px 7px 13px #070606,
-  -11px -7px 13px #f1f0f0;
+  -3px -4px 19px #f1f0f0;
   transition: transform 0.3s;
 }
 
@@ -56,41 +56,88 @@
   cursor: pointer;
 }
 
-
-@media screen and (max-width: 600px) {
-
+@media screen and (max-width: 1025px){
   .book-link {
-    flex: 0 0 auto;
-    width: 60%;
-    margin: 7% 0 0 1%
+
   }
 
-  .book-card {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    width: 94.25%;
-    flex: 0 0 auto;
+  .card-title{
+    font-size: 17px;
+    padding-top: 12px;
+    height: 2em;
   }
+
 }
 
-@media screen and (max-width: 425px) {
+//@media screen and (max-width: 600px) {
+//
+//  .book-link {
+//    flex: 0 0 auto;
+//    width: 60%;
+//    margin: 7% 0 0 1%
+//  }
+//
+//  .book-card {
+//    overflow-x: scroll;
+//    overflow-y: hidden;
+//    white-space: nowrap;
+//    width: 94.25%;
+//    flex: 0 0 auto;
+//  }
+//}
 
+
+
+
+//@media screen and (max-width: 930px) {
+//
+//}
+//
+//@media screen and (max-width: 651px) {
+//
+//}
+//
+@media screen and (max-width: 376px){
   .book-link {
-    width: 69%;
+    width: 95%;
+    height: 15%;
+    margin: 4% 0 0 1%;
+    padding-bottom: 10px;
   }
+
+  .card-title{
+    font-size: 22px;
+    padding-top: 23px;
+    height: 2em;
+  }
+
+    .book-card {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      width: 94.25%;
+      flex: 0 0 auto;
+    }
 }
 
-@media screen and (max-width: 425px) {
 
-  .book-link {
-    width: 78%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-
-  .book-link {
-    width: 90%;
-  }
-}
+//@media screen and (max-width: 425px) {
+//
+//  .book-link {
+//    width: 69%;
+//  }
+//}
+//
+////@media screen and (max-width: 425px) {
+////
+////  .book-link {
+////    width: 78%;
+////  }
+////}
+//
+//@media screen and (max-width: 320px) {
+//
+//  .book-link {
+//    width: 90%;
+//  }
+//}
