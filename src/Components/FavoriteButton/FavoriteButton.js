@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import Popup from 'react-popup';
 
 
 const FavoriteButton = ({book, favoritesBox, favoritedBooks, }) => {
@@ -14,6 +15,7 @@ const FavoriteButton = ({book, favoritesBox, favoritedBooks, }) => {
       book,
     ])
     saveToLocalStorage(book)
+    Popup.alert('Book added to reading list!')
   }
 
   return (
