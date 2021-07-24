@@ -1,0 +1,43 @@
+.favorite-button{
+    border-radius: 12px;
+    width: 185px;
+    height: 56px;
+    padding-bottom: 10px;
+    text-align:  center;
+    color:black;
+    background-color: #F88112;
+    box-shadow:  9px 3px 18px #070606;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+@media screen and (max-width: 1025px){
+  .favorite-button{
+    width: 150px;
+    height: 46px;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+
+  //span {
+  //  font-size:12px;
+  //}
+}
+
+
+//@media screen and (max-width: 930px) {
+//
+//}
+//
+//@media screen and (max-width: 651px) {
+//
+//}
+//
+@media screen and (max-width: 376px){
+  .favorite-button{
+    width: 150px;
+    height: 46px;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+}

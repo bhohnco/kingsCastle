@@ -9,10 +9,13 @@ input{
   width: 15%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .search-bar {
-    width: 38%;
-    padding-right: 18%;
+    width: 33%;
+    padding-right: 0;
+  }
+  input {
+    width: 82%;
   }
 }
 
@@ -39,7 +42,26 @@ input{
 }
 
 @media screen and (max-width: 375px) {
+  .search-bar {
+    width: 57%;
+    padding-right: 0;
+  }
   input {
-    width: 12em;
+    width: 82%;
   }
 }
+
+//@media screen and (max-device-width: 1024px){
+//
+//}
+//@media screen and (max-width: 930px) {
+//
+//}
+//
+//@media screen and (max-width: 651px) {
+//
+//}
+//
+//@media screen and (max-width: 376px){
+//
+//}

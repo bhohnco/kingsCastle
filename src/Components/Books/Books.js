@@ -1,5 +1,5 @@
 import React from 'react';
-import FavoriteButton from "../FavoriteButton/FavoriteButton";
+import AddToReadingList from "../AddToReadingList/AddToReadingList";
 import PropTypes from "prop-types";
 
 
@@ -20,7 +20,7 @@ const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayError
              id={bookTitle}
         />
         <div className="add-to-reading">
-          <FavoriteButton book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
+          <AddToReadingList book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
           />
           <div/>
 
@@ -46,7 +46,7 @@ const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayError
              id={bookTitle}
         />
         <div className="add-to-reading">
-        <FavoriteButton book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
+        <AddToReadingList book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
         />
           <div/>
 
