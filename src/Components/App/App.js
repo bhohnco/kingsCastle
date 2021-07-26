@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import Header from '../Header/Header'
 import SearchBar from "../SearchBar/SearchBar";
+import SortComponent from '../SortComponent/SortComponent';
 import Books from '../Books/Books'
 import bookData from "../../bookData";
 import utils from "../../utilities/utils";
@@ -12,19 +13,20 @@ function App() {
 
   const [books, setBooks,] = useState([])
   const [searchedBooks, setSearchedBooks] = useState('')
+  const [sortedBooks, setSortedBooks] = useState([])
   const [favorites, setFavorites] = useState([])
   const [error, setError] = useState('')
 
 
   useEffect(() => {
     const narrowObject = utils.randomArrayShuffle(bookData)
-
     setBooks(narrowObject)
   }, [])
 
   const pushSearchResults = (search) => {
     setSearchedBooks(search)
   }
+
 
   const displayErrorMessage = () => {
     <article className="display-error-message">
@@ -53,10 +55,17 @@ function App() {
                           searchValue={searchedBooks}
                           setSearchValue={setSearchedBooks}
                           displayErrorMessage={displayErrorMessage}/>
+                           <SortComponent
+                            placeholder="Sort Books"
+                            books={books}
+                            sortedValue={sortedBooks}
+                            setSortValue={setSortedBooks}
+                            displayErrorMessage={displayErrorMessage}/>
             <div className='card-display'>
                 <Books
                   books={books}
                   searchedBooks={searchedBooks}
+                  sortedBooks={sortedBooks}
                   bookGroup={setBooks}
                   favoritesBox={favorites}
                   favoritedBooks={setFavorites}

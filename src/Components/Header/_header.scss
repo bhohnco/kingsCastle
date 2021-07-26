@@ -15,6 +15,7 @@
   display: flex;
   margin-left: 6%;
   font-size: 30px;
+  text-shadow: #b4b4b4;
 }
 
 .page-quote{
@@ -27,13 +28,14 @@
 }
 
 .reading-list-button {
-  border-radius: 10px;
+  border-radius: 8px;
   width: 175px;
   height: 50px;
   text-align:  center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin-left: -26%;
+  border: #b4b4b4;
   background-color: #F88112;
   color:black;
 }
@@ -85,15 +87,27 @@
 }
 
 @media screen and (max-width: 425px) {
-
-  .header-button {
-    width: 156px;
+  .App-header{
+    border-radius: 0;
   }
 
-  .header-button {
-    width: 56px;
+  .title {
+    font-size: 33px;
+    width: 0;
+    margin-left: 5%;
+    margin-top: 3%
   }
 
+
+  .reading-list-button {
+    width: 95px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .page-quote{
+    display:none;
+  }
 }
 
 @media screen and (max-width: 375px) {

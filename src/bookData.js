@@ -262,7 +262,7 @@ const bookData = [
     dateReleased:'August 30th 1979'
   },
   {
-    bookTitle: 'The Drawing Of Three: The Dark Tower II',
+    bookTitle: 'The Dark Tower II: The Drawing Of Three',
     photoUrl: TheDrawingOfThree,
     goodReadsRank: 12,
     overview: 'While pursuing his quest for the Dark Tower through a world that is a nightmarishly distorted mirror image of our own, Roland, the last gunslinger, encounters three mysterious doorways on the beach. Each one enters into the life of a different person living in contemporary New York.\n' +
@@ -284,7 +284,7 @@ const bookData = [
     dateReleased:'August 29th 1996'
   },
   {
-    bookTitle: 'The Gunslinger: The Dark Tower I',
+    bookTitle: 'The Dark Tower I: The Gunslinger',
     photoUrl: TheGunslinger,
     goodReadsRank: 10,
     overview: 'In the first book of this brilliant series, Stephen King introduces readers to one of his most enigmatic heroes, Roland of Gilead, The Last Gunslinger. He is a haunting figure, a loner on a spellbinding journey into good and evil. In his desolate world, which frighteningly mirrors our own, Roland pursues The Man in Black, encounters an alluring woman named Alice, and begins a friendship with the Kid from Earth called Jake. Both grippingly realistic and eerily dreamlike, The Gunslinger leaves readers eagerly awaiting the next chapter.',
@@ -338,7 +338,7 @@ const bookData = [
     dateReleased:''
   },
   {
-    bookTitle: 'The Wind Through The Keyhole',
+    bookTitle: 'The Dark Tower: The Wind Through The Keyhole',
     photoUrl: TheWindThroughTheKeyhole,
     goodReadsRank: '',
     overview: '',
@@ -356,7 +356,7 @@ const bookData = [
     dateReleased:''
   },
   {
-    bookTitle: 'Wizard And Glass',
+    bookTitle: 'The Dark Tower IV: Wizard and Glass',
     photoUrl: WizardAndGlass,
     goodReadsRank: 17,
     overview: '',
@@ -365,7 +365,7 @@ const bookData = [
     dateReleased:''
   },
   {
-    bookTitle: 'The Dark Tower: The Dark Tower VII',
+    bookTitle: 'The Dark Tower VII: The Dark Tower',
     photoUrl: TheDarkTower7,
     goodReadsRank: 26,
     overview: 'The seventh and final installment of Stephen King\'s The Dark Tower saga is perhaps the most anticipated book in the author\'s long career. King began this epic tale about the last gunslinger in the world more than 20 years ago; now he draws its suspenseful story to a close, snapping together the last pieces of his action puzzle and drawing Roland Deschain ever closer to his ultimate goal.',
@@ -424,7 +424,7 @@ const bookData = [
       dateReleased:'November 8th 2011'
     },
     {
-      bookTitle: 'Wolves of the Calla: The Dark Tower V',
+      bookTitle: 'The Dark Tower V: Wolves of the Calla',
       photoUrl: Wolves,
       goodReadsRank: 33,
       overview: '',
@@ -685,7 +685,7 @@ const bookData = [
       dateReleased:''
     },
     {
-      bookTitle:'The Waste Lands: The Dark Tower III',
+      bookTitle:'The Dark Tower III: The Waste Lands',
       photoUrl: TheWastelands,
       goodReadsRank: 14,
       overview: 'Several months have passed, and Roland’s two new tet-mates have become proficient gunslingers. Eddie Dean has given up heroin, and Odetta’s two selves have joined, becoming the stronger and more balanced personality of Susannah Dean. But while battling The Pusher in 1977 New York, Roland altered ka by saving the life of Jake Chambers, a boy who—in Roland’s where and when—has already died. Now Roland and Jake exist in different worlds, but they are joined by the same madness: the paradox of double memories. Roland, Susannah, and Eddie must draw Jake into Mid-World then follow the Path of the Beam all the way to the Dark Tower. But nothing is easy in Mid-World. Along the way our tet stumbles into the ruined city of Lud, and are caught between the warring gangs of the Pubes and the Grays. The only way out of Lud is to wake Blaine the Mono, an insane train that has a passion for riddling, and for suicidal journeys.',
@@ -739,7 +739,7 @@ const bookData = [
       dateReleased:''
     },
     {
-      bookTitle:'The Dark Tower VI ',
+      bookTitle:'The Dark Tower VI: Song of Susannah',
       photoUrl: SongOfSuzanna,
       goodReadsRank: '',
       overview: '',
