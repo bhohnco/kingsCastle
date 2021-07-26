@@ -3,7 +3,8 @@ import AddToReadingList from "../AddToReadingList/AddToReadingList";
 import PropTypes from "prop-types";
 
 
-const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayErrorMessage }) => {
+const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, sortedBooks }) => {
+
 
   if (searchedBooks.length) {
     const searchBooks = books?.filter(book => {
@@ -30,7 +31,6 @@ const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayError
   }
 
   if (books.length) {
-    console.log(books)
     return books.map((book, i) => {
       const {bookTitle, photoUrl} = book
       // let coverImage = photoUrl
@@ -54,6 +54,28 @@ const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayError
         </div>
     })
   }
+
+
+  if (sortedBooks.length) {
+    return sortedBooks.map((book, i) => {
+      const {bookTitle, photoUrl} = book
+      return <div className="book-link" key={i}>
+        <h3 className="card-title">{bookTitle}</h3>
+        <img className="book-card" src={photoUrl} style={{ backgroundImage: `url(${photoUrl})`
+        }}
+             key={i}
+             alt={bookTitle}
+             id={bookTitle}
+        />
+        <div className="add-to-reading">
+          <AddToReadingList book={book} favorites={favoritesBox} favoritedBooks={favoritedBooks}
+          />
+          <div/>
+
+        </div>
+      </div>
+    })
+  }
   else{
     return null
   }
@@ -62,6 +84,7 @@ const Books = ({books, favoritesBox, favoritedBooks, searchedBooks, displayError
 Books.propTypes = {
   books:PropTypes.array,
   searchedBooks:PropTypes.string,
+  sortedBooks:PropTypes.array,
   bookGroup:PropTypes.func,
   favoritesBox:PropTypes.array,
   favoritedBooks:PropTypes.func,

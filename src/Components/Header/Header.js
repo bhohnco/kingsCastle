@@ -7,7 +7,7 @@ const header = () => {
       <h5 className='title'>Kings Castle</h5>
           <div className='page-quote'>The place to find all of Stephen Kings works</div>
           <Link to = "/readinglist" >
-            <button className="reading-list-button">Go to Reading-List</button>
+            <button className="reading-list-button">Reading-List</button>
           </Link>
       </header>
   );

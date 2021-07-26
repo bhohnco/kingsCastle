@@ -13,12 +13,11 @@
 
 .card-title{
   font-size: 22px;
-  padding-top: 15px;
+  font-weight: bold;
+  margin: 0 auto;
+  padding-top: 13px;
   height: 2em;
-  //margin-left: auto;
-  //margin-right: auto;
   position: relative;
-  //top: 50%;
   transform: translateY(-50%);
   color:#F88112;
   text-shadow: 1px 1px 2px #0e0b0b;
@@ -50,7 +49,7 @@
 
 .favorite-button:hover{
   cursor: pointer;
-  //transform: scale(1.1);
+  transform: scale(1.1);
 }
 .path:hover{
   cursor: pointer;
@@ -107,7 +106,7 @@
 
   .card-title{
     font-size: 22px;
-    padding-top: 23px;
+    padding-top: 14px;
     height: 2em;
   }
 
@@ -121,12 +120,29 @@
 }
 
 
-//@media screen and (max-width: 425px) {
-//
-//  .book-link {
-//    width: 69%;
-//  }
-//}
+@media screen and (max-width: 425px) {
+
+  .book-link {
+    width: 95%;
+    height: 15%;
+    margin: 4% 0 0 1%;
+    padding-bottom: 10px;
+  }
+
+  .card-title{
+    font-size: 23px;
+    padding-top: 14px;
+    height: 2em;
+  }
+
+  .book-card {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 94.25%;
+    flex: 0 0 auto;
+  }
+}
 //
 ////@media screen and (max-width: 425px) {
 ////
